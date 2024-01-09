@@ -1,5 +1,5 @@
-import About from "./pages/About";
-
+import About from "../../pages/About";
+import '../Navbar/navbar.css'
 export default function Navbar(){
     return <nav className='nav'>
       <a href="/" className= "site-title">ONMYSCREEN</a>
