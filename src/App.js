@@ -1,16 +1,10 @@
-import Navbar from "./Navbar"
-import CopyrightBar from "./footer/CopyrightBar";
+import Layout from "./Layout";
 
 function App() {
   return (
    
 <>
-   <Navbar />
-   <div>
-    {
-       <CopyrightBar />
-    }
-   </div>
+   <Layout/>
    </>
   );
 }
