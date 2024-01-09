@@ -1,3 +1,11 @@
-export default function About(){
-    return <h1>About</h1>
+import React from 'react'
+
+const About = () => {
+  return (
+    <div>
+      about
+    </div>
+  )
 }
+
+export default About

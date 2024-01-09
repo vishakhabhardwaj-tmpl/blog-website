@@ -1,10 +1,11 @@
-import Layout from "./components/Layout/Layout";
+import PageRouter from "./Routing/PageRouter";
+//import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
    
 <>
-   <Layout/>
+   <PageRouter/>
    </>
   );
 }
