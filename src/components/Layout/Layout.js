@@ -1,15 +1,14 @@
 import React from 'react';
-import Navbar from './Navbar';
-import RightSidebar from './RightSidebar';
-import Footer from './footer/Footer';
-
+import Navbar from '../Navbar/Navbar';
+import RightSidebar from '../StickySideBar/RightSidebar';
+import Footer from '../Footer/Footer';
 const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
       <RightSidebar />
       {children}
-      <Footer />
+      <Footer/>
     </>
   );
 }
