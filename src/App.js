@@ -1,13 +1,12 @@
-import PageRouter from "./Routing/PageRouter";
-//import Layout from "./components/Layout/Layout";
+import React from 'react'
+import PageRouter from './Routing/PageRouter'
 
-function App() {
+const App = () => {
   return (
-   
-<>
-   <PageRouter/>
-   </>
-  );
+    <div>
+      <PageRouter/>
+    </div>
+  )
 }
 
-export default App;
+export default App
