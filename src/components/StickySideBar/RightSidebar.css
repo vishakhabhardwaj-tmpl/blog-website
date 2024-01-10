@@ -1,7 +1,7 @@
 /* RightSidebar.css */
 /*@import '@fortawesome/fontawesome-free/css/all.css';*/
 
-/*.right-sidebar {
+.right-sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -12,7 +12,7 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
-  }*/
+  }
   
   .social-media-link {
     margin-bottom: 15px;
@@ -31,5 +31,7 @@
     flex-direction:column;
     align-items: center;
     justify-content: center;
+    
   }
+  
   

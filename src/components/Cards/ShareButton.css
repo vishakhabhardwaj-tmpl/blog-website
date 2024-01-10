@@ -1,0 +1,42 @@
+/* ShareButton.css */
+
+.share-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dots-button {
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #fff; /* Set the text color to white */
+  }
+  
+  .share-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .share-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Set the text color to a dark color */
+    transition: background-color 0.3s ease;
+  }
+  
+  .share-menu a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  
