@@ -1,0 +1,96 @@
+.card-container{
+    overflow: hidden;
+    box-shadow:0px 0px 15px -5px;
+    background-color: black;
+    width: calc(30% - 5px);
+
+}
+.image-container img{
+    overflow:hidden;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    object-fit: cover;
+}
+.card-content{
+    margin: 1rem;
+    margin-top: 0.5rem;
+    color:white;
+
+}
+h3,p{
+
+    margin:0;
+    padding: 0;
+    
+}
+.card-title{
+    margin-bottom: 0.5rem;
+    font-size: large;
+
+}
+.card-body{
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; 
+    line-clamp: 2;
+}
+.card-body:hover{
+    color: red;
+}
+
+.card-container:hover .card-title {
+    color: red;
+  }
+
+.date{
+    color: white;
+    font-size: 10px;
+
+
+}
+.share-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dots-button {
+    cursor: pointer;
+    padding: 8px;
+    background: black;
+    border: none;
+    font-size: 16px;
+    color: white; /* Set the text color */
+  }
+  
+  .share-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .share-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .share-menu a:hover {
+    background-color: #f2f2f2;
+  }
+  
+
+
