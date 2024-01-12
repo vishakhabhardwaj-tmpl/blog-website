@@ -11,15 +11,16 @@ const SectionWithForm = () => {
       </div>
       <form className="form">
 
-        <div className="form-group1">
-            <div className='form2'>
+        < div className="form-group1">
+            < div className='form2'>
           <label htmlFor="firstName">First Name<span className="required">*</span>:</label>
           <input type="text" id="firstName" name="firstName" required />
           </div>
           <div className='form2'>
           <label htmlFor="lastName">Last Name<span className="required">*</span>:</label>
           <input type="text" id="lastName" name="lastName" required />
-          </div>
+          </div> 
+        
           </div>
         <div className="form-group">
           <label htmlFor="email">Email<span className="required">*</span>
@@ -27,7 +28,7 @@ const SectionWithForm = () => {
           <input type="email" id="email" name="email" required />
         </div>
         <div className="form-bottom">
-          <button type="submit" className="subscribe-button">Subscribe</button>
+          <button type="submit" className="subscribe">Subscribe</button>
         </div>
       </form>
     </div>
