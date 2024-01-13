@@ -53,6 +53,7 @@ h3,p{
 
 
 }
+/*
 .share-container {
     position: absolute;
     top: 8px;
@@ -67,7 +68,7 @@ h3,p{
     background: black;
     border: none;
     font-size: 16px;
-    color: white; /* Set the text color */
+    color: white; /* Set the text color 
   }
   
   .share-menu {
@@ -92,5 +93,5 @@ h3,p{
     background-color: #f2f2f2;
   }
   
-
+*/
 
