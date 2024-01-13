@@ -1,33 +1,35 @@
-
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .nav{
     background-color: black;
     color: white;
-    display: center;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;  
-    gap: 2rem;
-    height: 80px;
-    padding:0 1rem;
+    height:100%;
+    padding: 50px;
+    width: 100%;
 }
 .nav ul{
-    padding-top: 50px;
-    padding-right: 50px;
-    margin: 0;
+    margin: 0%;
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 1rem;
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    color: white;
 }
-.nav a{
-    color: inherit;
+ .a{
+    color: white;
     text-decoration: none;
     align-items: center;
     
-}
-
-.site-title{
-    font-size: 1rem;
 }
 .nav li.active{
     background-color: black;
@@ -38,18 +40,39 @@
     color:red;
 }
 .search{
-    --padding:14px;
+    padding: 14px;
     width: max-content;
     display: flex;
     align-items: center;
     padding: var(--padding);
-    border-radius: 28px;
+    border-radius: 10px;
     background: black;
+    height: 100%;
 }
+.logo{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+title{
+    color: white;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.nav-icons{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .search-input{
     font-size: 16px;
     font-family: 'Lexend', sans-serif;
-    color: black;
+    color: white;
     margin-left: var(--padding);
     outline: none;
     border: none;
@@ -60,48 +83,114 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
- .nav-btn{
-    padding: 5px;
-    cursor: pointer;
-    background: white;
+
+*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    padding-top: 30px;
+    font-size: 10px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: black;
     border: none;
-    outline: none;
-    visibility: hidden;
-    opacity: 0;
-}
 
-@media only screen and (width <  450px){
-    nav .nav-btn{
-        visibility: visible;
-        opacity: 1;
-    }
+  }
+  
+  .search-input {
+    padding: 5px;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    border: none;
+  }
+  
+  .search-icon {
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+    color: white;
+  }
 
-    nav nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
+  .nav-links li :hover{
+    color: red;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
+
+  
+  @media screen and (max-width: 768px) {
+
+
+    .nav {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        background-color:black;
-        transition: 1s;
-        transform: translateY(-100vh);
-    }
-    nav .responsive_nav{
-        transform: none;
-    }
-    nav .nav-close-btn{
-        position: absolute;
-        top:2rem;
-        right:2rem;
-
-    }
+        gap: 1rem; /* Updated to column for mobile screens */
+      }
     
-}
+      
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: black;
+      columns: white;
+      padding: 10px;
+      color: white;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  }
+  
+
+
+
+  
+    
+
 
 
 

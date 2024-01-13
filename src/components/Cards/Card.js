@@ -1,6 +1,5 @@
 import React from 'react'
 import './Card.css'
-import ShareButton from './ShareButton';
 
 
 const Card = ({title,imageurl,shortdescription, Date}) => {
@@ -12,7 +11,6 @@ const Card = ({title,imageurl,shortdescription, Date}) => {
        </div>
        <div className='card-content'>
         <div className='date'>{Date}</div>
-        <ShareButton />
        <div className='card-title'>
         {title}
 
