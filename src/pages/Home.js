@@ -1,6 +1,7 @@
 import React from 'react'
 import Reviews from '../components/HomePage/Reviews'
 import SectionWithForm from '../components/HomePage/SectionWithForm'
+import RatingSection from '../components/HomePage/RatingSection'
 
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
         <>
     <Reviews />
     <SectionWithForm/>
+    <RatingSection/>
     
     </>
     </div>
