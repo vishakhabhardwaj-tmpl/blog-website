@@ -20,7 +20,7 @@
     color:white;
 
 }
-h3,p{
+h1,p{
 
     margin:0;
     padding: 0;
@@ -53,45 +53,3 @@ h3,p{
 
 
 }
-/*
-.share-container {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .dots-button {
-    cursor: pointer;
-    padding: 8px;
-    background: black;
-    border: none;
-    font-size: 16px;
-    color: white; /* Set the text color 
-  }
-  
-  .share-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .share-menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-    transition: background-color 0.3s ease;
-  }
-  
-  .share-menu a:hover {
-    background-color: #f2f2f2;
-  }
-  
-*/
-

@@ -3,6 +3,15 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './RatingSection.css';
+    
+const SlickPrevArrow = ({ onClick }) => (
+  < div className="slick-arrow slick-prev" onClick={onClick}></div> 
+    );
+    const SlickNextArrow = ({ onClick }) => (
+      < div className="slick-arrow slick-next" onClick={onClick}>
+        </div> 
+        );
+  
 
   const RatingSection = () => {
    
@@ -44,10 +53,10 @@ import './RatingSection.css';
     ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 2, // Adjust as needed
+    slidesToShow: 1.3, // Adjust as needed
     slidesToScroll: 1,
     centerMode: false,
     responsive: [
@@ -60,11 +69,17 @@ import './RatingSection.css';
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1.5,
         },
       },
     ],
-  };
+
+   
+
+  prevArrow: <SlickPrevArrow />,
+  nextArrow: <SlickNextArrow />,
+};
+
   return (
     <>
     <div className="rating-section">
@@ -72,7 +87,7 @@ import './RatingSection.css';
       <hr />
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="image-container">
+          <div key={index} className="imagees-container">
             <img src={image.url} alt={image.title} />
             <div className="image-overlay">
               <h3>{image.title}</h3>

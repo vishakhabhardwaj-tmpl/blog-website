@@ -77,7 +77,7 @@ const Reviews = () => {
   return (
     <div>
       <div className='start'>
-      <div className='name'><h1>REVIEWS</h1></div>
+      <div className='reviews'><h1>REVIEWS</h1></div>
         <div className='card-section'>
         {data.map((blogData) => {
                     return (
