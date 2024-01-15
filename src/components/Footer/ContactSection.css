@@ -1,0 +1,184 @@
+/*.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    background-color: black;
+    gap: 2rem;
+  }
+  
+  .left-box {
+    height: 450px;
+    width: 450px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .label{
+    flex-direction: column;
+  }
+  
+  .box-text {
+    color: white;
+
+  }
+  
+  .right-form {
+    height: 450px;
+    width: 400px;
+    flex: 1;
+    padding-top: 150px;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #161515;
+
+    
+    
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .form-line {
+    margin-bottom: 20px; /* Adjust the margin as needed for the desired gap 
+  }
+  
+  
+
+  
+  .form-line.submit-line button {
+    background-color: red;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 10px 15px 10px 15px;
+  }
+  
+  .form-line.submit-line button:hover {
+    background-color:#161515;
+    color: red;
+  }
+  */
+
+
+
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    background-color: black;
+    gap: 0.8rem;
+    height: 100%;
+    width: 98%;
+  }
+  
+  .left-box {
+    height: 350px;
+    width: 400px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  
+  .name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .label {
+    flex-direction: column;
+  }
+  
+  .box-text {
+    color: white;
+  }
+  
+  .right-form {
+    height: 350px;
+    width: 100%; /* Updated to full width for mobile */
+    flex: 1;
+    padding-top: 100px;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #161515;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-line {
+    margin-bottom: 20px; /* Adjust the margin as needed for the desired gap */
+  }
+  
+  .form-line.input-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .form-line.input-line input {
+    width: 100%; /* Updated to full width for mobile */
+    margin-bottom: 10px;
+  }
+  
+  .form-line textarea {
+    width: 100%; /* Updated to full width for mobile */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .form-line.submit-line button {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+  }
+  
+  .form-line.submit-line button:hover {
+    background-color: #161515;
+    color: red;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-box {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  
+    .right-form {
+      padding-top: 20px;
+    }
+  }
+  
+  
+  
