@@ -1,0 +1,55 @@
+
+  .about-me-section {
+    text-align: center;
+    h2{
+        text-align: start;
+        font-size: large;
+        color: white;
+        margin-left: 10px;
+    }
+  }
+  
+ 
+  
+  hr {
+    width: 98%;
+    margin: 10px auto;
+    border: 1px semi-solid #ddd;
+  }
+  
+  .author-section {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    gap: 5rem;
+  }
+  
+  .author-image {
+    margin-right: 20px;
+  }
+  
+  .author-image img {
+    width: 500px;
+    height: 600px;
+    
+  }
+  
+  .author-description {
+    text-align: left;
+    color: white;
+    justify-content: flex-start;
+  }
+  
+  h3 {
+    margin-bottom: 5px;
+  }
+  
+  .blog-button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
