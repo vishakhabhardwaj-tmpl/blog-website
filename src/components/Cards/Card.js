@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Card.css'
 
 
 const Card = ({title,imageurl,shortdescription, Date}) => {
   return (
     <div className='card-container'>
+       <Link to="/blog/1">
        <div className='image-container'>
         <img src={imageurl} alt=''/>
 
@@ -21,8 +23,8 @@ const Card = ({title,imageurl,shortdescription, Date}) => {
        </div>
        </div>
 
-      
-    </div>
+       </Link>
+    </div> 
   )
 }
 

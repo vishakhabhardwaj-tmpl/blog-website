@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from '../Cards/Card'
 import './Reviews.css'
 
@@ -81,7 +82,9 @@ const Reviews = () => {
         <div className='card-section'>
         {data.map((blogData) => {
                     return (
+                        
                         <Card key={blogData.id} shortdescription={blogData.shortdescription} imageurl={blogData.imageUrl} title={blogData.title} Date={blogData.Date} />
+                       
                     )
                 })}
     </div>
