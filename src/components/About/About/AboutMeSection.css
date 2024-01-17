@@ -14,21 +14,24 @@
   hr {
     width: 98%;
     margin: 10px auto;
-    border: 1px semi-solid #ddd;
+    border: 1px light #ddd;
   }
   
   .author-section {
     display: flex;
     align-items: center;
-    padding: 100px;
+    padding: 40px;
     gap: 5rem;
   }
   
   .author-image {
+    display: flex;
+    align-items: flex-end;
     margin-right: 20px;
   }
   
   .author-image img {
+    align-items: center;
     width: 500px;
     height: 600px;
     

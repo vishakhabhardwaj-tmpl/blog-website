@@ -1,0 +1,75 @@
+
+  .singlesidebar{
+    background-color: #161516;
+    color: white;
+    width: 30%;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 60px;
+    font-weight: 10;
+    padding-bottom: 30px;
+
+  }
+  .about-me{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 15px;
+    font-weight: 100;
+    font-style: normal;
+     hr{
+        width: 100%;
+          background-color: 1px light white;
+ 
+    }
+    h2{
+        gap: 1rem;
+    }
+    p{
+        font-size: small;
+        font-weight: 50;
+        font-style: normal;
+    }
+  }
+
+  .about-me button{
+    background-color: #161516;
+    color: white;
+    border: 1px light white;
+    padding: 10px 5px;
+
+    &:hover{
+        background-color: red;
+    }
+  }
+  .imageauthor{
+    width: 150px;
+    height: 200px;
+  }
+
+  .postarchieve{
+    background-color: #161516;
+    button{
+        background-color: white;
+    color: black;
+    padding: 10px 12px;
+    font-weight: lighter;
+
+
+    }
+  }
+  .tags{
+    background-color: #161516;
+    button{
+        background-color: white;
+    color: black;
+    font-weight: lighter;
+    padding: 10px 12px;
+
+    }
+  }
+
+ 
+  
+
+  

@@ -1,0 +1,17 @@
+.RecentCardFirst{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    
+}
+
+.recentHeading{
+    margin-top: 20px;
+    display: flex;
+
+}
+
+.recentImage{
+    border: none;
+}
+

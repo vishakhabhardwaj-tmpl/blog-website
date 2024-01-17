@@ -1,0 +1,22 @@
+/* SingleBlogPage.css */
+
+.blogpagemain{
+    display: flex;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: lighter;
+    }
+
+  .fullblog{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 23rem;
+  }
+  blogsidebar{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+  }
+  
