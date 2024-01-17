@@ -10,13 +10,14 @@
   .fullblog{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    gap: 23rem;
+    width: 70%;
   }
   blogsidebar{
-    width: 20%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     padding-left: 50px;
   }
+
+
   
