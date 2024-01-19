@@ -4,6 +4,15 @@
     background-color: black;
     width: calc(30% - 5px);
 
+    @media (width <1530px ) {
+        width: calc(45% - 5px);
+ 
+    }
+    @media (width <450px ) {
+        width: calc(100% - 5px);
+ 
+    }
+    
 }
 .image-container img{
     overflow:hidden;
@@ -15,7 +24,6 @@
     object-fit: cover;
 }
 .card-content{
-    margin: 1rem;
     margin-top: 0.5rem;
     color:white;
 
@@ -38,7 +46,9 @@ h1,p{
     overflow: hidden;
     -webkit-line-clamp: 2; 
     line-clamp: 2;
-}
+    margin-bottom: 2rem;
+    }
+
 .card-body:hover{
     color: red;
 }

@@ -59,6 +59,11 @@
     border-radius: none;
   }
 
+  .imageauthor>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .postarchieve{
     background-color: #161516;
     
