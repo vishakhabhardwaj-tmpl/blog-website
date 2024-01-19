@@ -2,102 +2,150 @@
 
 .section-with-form {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    width: 100%;
+    flex-direction: row;
     gap: 1rem;
     margin-top: 80px;
+    font-family: light1475496,avenir-lt-w05_35-light,sans-serif;
+    @media screen and (max-width:768px){
+      display: flex;
+      flex-direction: column;
+    }
   }
   
   .box {
+   /* background-color: red;
+    display: flex;
+    height: 550px;
+    width: 40%;
+    h2{
+
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 45px;
+       padding-left: 15px;
+
+       @media  screen and (width:768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30%;
+        font-size: 30px
+        
+       }
+
+    }
+    @media(width:768px) {
+      display: flex;
+      margin-left: 0;
+      
+    }
+    @media(width:450px) {
+      width: 50%;
+      
+    }
+
+@media screen and (max-width:768px) {
+      display: flex;
+       width: 100%;
+      
+    }*/
+    height: 500px;
+    width: 400px;
     background-color: red;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: 30px;
-    min-height: 300px;
-    width: 30%;
+    justify-content: center;
+    @media screen and (max-width:768px) {
+      width: 100%;
+      
+    }
+    
+    
+
   }
   
   .supporting-text {
     color: white;
     font-size: 27px;
     display: flex;
+    justify-content: center;
     align-content: center;
     font-weight: 1500;
 
   }
   
   .form {
-    flex:1;
-    margin-left: 5px; 
+   /* display: flex; 
+    flex-direction: column;
     background-color: #161515;
-    justify-items: center;
+    height: 550px;
+    width: 100%;
+    padding-inline: 100px;
+    @media(width:768px) {
+      display: flex;
+      flex-direction: column;
+
+      
+    }
+    @media  screen and (max-width:768px) {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      overflow-x: hidden;
+
+      
+    }
+
+    @media(width:820px-1200px){
+   padding-inline: 50px;
+    }
+    input {
+      flex: 1;
+      width: 100%;
+      padding: 0;
+      border:none;
+      background-color: #161515;
+      color:white;
+      border-bottom:1px solid white;
+      outline: none;
+      font-size: 20px;
+    } */
+    height: 500px;
+    width: 100%; 
+    flex: 1;
+    padding-top: 100px;
+    padding-inline: 80px;
+    box-sizing: border-box;
     justify-content: center;
-    min-height: 300px;
-    width: 80%;
+    background-color: #161515;
+    
+    input:hover{
+      border-bottom:1px solid red;
+      }
+
   }
   
   .form-group {
-    margin-bottom: 15px;
-    flex: 2;
     padding-top: 50px;
-   /* padding-left: 160px; */
-   align-items: center;
-   justify-content: center;
-   
-    
+    flex-direction: column;
     width: 100%;
-    
 
-  }
-  .form-group input{
-    width: 550px;
-  }
-
-
-
-  .form-group1{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
+   @media(width>786px){
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
-  }
- form-group1 .label{
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
- form-group .label{
-  display: flex;
-  justify-content: center;
-  align-items: center;
- }
-  
-  label {
+   }
+   label {
     display: block;
     margin-bottom: 5px;
-    justify-content: center;
     color: white;
-    font-size: 10px;
+    font-size: 20px;
     font: weight 100px;
     font-family: 'Times New Roman', Times, serif;
     gap: 5rem;
     
   }
-  
-  .input-group {
-    display: flex;
-  }
-  .form2{
-    display: flex;
-    flex-direction: column;
-  }
-  
   input {
     flex: 1;
     padding: 0;
@@ -105,17 +153,73 @@
     background-color: #161515;
     color:white;
     border-bottom:1px solid white;
-    width: 250px;
     outline: none;
     font-size: 14px;
   }
   input:hover{
-  border-bottom:1px solid red;
+    border-bottom:1px solid red;
+    }
+    @media  screen and (max-width:768px) {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      overflow-x: hidden;
+
+      
+    }
+
   }
-  form-group1.input{
-    display: flexbox;
-    flex-direction: column;
+
+  .firstname{
+    width: 100%;
   }
+  .lastname{
+    width: 100%;
+  }
+
+
+
+  .form-group1{
+    display: flex;
+    justify-content: space-between;
+    gap:1.5rem;
+    width: 100%;
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: white;
+      font-size: 20px;
+      font: weight 100px;
+      font-family: 'Times New Roman', Times, serif;
+      gap: 5rem;
+      
+    }
+    input {
+      flex: 1;
+      padding: 0;
+      border:none;
+      background-color: #161515;
+      color:white;
+      border-bottom:1px solid white;
+      outline: none;
+      font-size: 14px;
+      gap: 1rem;
+    }
+    input:hover{
+      border-bottom:1px solid red;
+      }
+      @media  screen and (max-width:768px) {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        overflow-x: hidden;
+  
+        
+      }
+
+      
+  }
+  
   
   .required {
     color: red;
@@ -125,14 +229,22 @@
   
   .form-bottom {
     display: flex;
-    margin-top: 20px;
-    align-items: center;
-    padding-left: 635px;
+    margin-top: 30px;
+    align-self: flex-end;
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
-  }
-  form-bottom .input{
-    width: 100%;
+    @media  screen and (max-width:768px) {
+      display: flex;
+      flex-direction: column;
+      padding-right: 40px;
+      width: 65%;
+      overflow-x: hidden;
+      padding-bottom: 30px; ;
+
+      
+    }
+
+
   }
   
   .subscribe {
@@ -141,6 +253,7 @@
     border: 1px solid white;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
     font-weight: lighter;
     padding-left: 20px;
     padding-right: 20px;
@@ -153,43 +266,3 @@
     border: red;
 
   }
-
-  @media(max-width: 768px) {
-    .box,
-    .form{
-      width: 100%;
-    }
-  }
-
-  @media(width>450px){
-    .form-group{
-          padding-left: 90px;
-    }
-  }
-  @media(width>450px){
-    .form-bottom{
-      padding-left: 550px;
-    }
-  }
-
-  @media(width>768px){
-    .form-group{
-      padding-left:165px;
-    }
-  }
-
-  
-  @media(width>768px){
-    .form-bottom{
-      padding-left:620px;
-    }
-  }
-  @media(width>450px){
-    .box{
-      margin-left: 0px;
-    }
-  }
-  
-  
-
-

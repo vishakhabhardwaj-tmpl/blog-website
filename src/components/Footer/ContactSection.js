@@ -14,10 +14,14 @@ HAVE I MISSED<br/> ANYTHING GOOD <br/> LATELY?
         <form>
           <div className="form-line">
             <div className='name'>
+              <div className='firstnamee'>
           <label htmlFor="firstName">First Name:</label>
             <input type="text" />
+            </div>
+            <div className='lastnamee'>
             <label htmlFor="lastName">Last Name:</label> 
             <input type="text" />
+            </div>
             </div>
           </div>
           <div className="form-line">
@@ -25,8 +29,8 @@ HAVE I MISSED<br/> ANYTHING GOOD <br/> LATELY?
             <input type="email" required />
           </div>
           <div className="form-line">
-          <label htmlFor="Message">Leave us a message:</label>
-            <input type="text"/>
+          <label className='label-form-line' htmlFor="Message">Leave us a message:</label>
+            <input type="textarea"/>
           </div>
           <div className="form-line submit-line">
             <button type="submit">Submit</button>

@@ -5,6 +5,12 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-inline: 30px;
+  @media screen and (max-width:450px){
+    padding: 0px;
+
+    
+  }
 }
 
 code {
