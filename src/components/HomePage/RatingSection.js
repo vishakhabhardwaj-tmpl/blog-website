@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -79,6 +79,19 @@ const SlickPrevArrow = ({ onClick }) => (
   prevArrow: <SlickPrevArrow />,
   nextArrow: <SlickNextArrow />,
 };
+const[rating,setRating]=useState()
+const getrating = async () => {
+  const url = 'https://onmyscreen-backend.onrender.com/blogs'
+  const response = await fetch(url)
+  const data = await response.json()
+  setRating(data?.ratingsData)
+  console.log(rating,data)
+}
+useEffect(() => {
+  getrating()
+
+  
+}, [])
 
   return (
     <>
@@ -86,9 +99,9 @@ const SlickPrevArrow = ({ onClick }) => (
       <h2 className='heading'>ON MY SCREEN RATING</h2>
       <hr />
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {rating?.map((image, index) => (
           <div key={index} className="imagees-container">
-            <img src={image.url} alt={image.title} />
+            <img src={image.ratingImage} alt={image.title} />
             <div className="image-overlay">
               <h3>{image.title}</h3>
               <p>Rating: {image.rating}</p>

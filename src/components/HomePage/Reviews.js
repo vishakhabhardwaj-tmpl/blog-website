@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import { Link } from 'react-router-dom'
 import Card from '../Cards/Card'
 import './Reviews.css'
@@ -72,6 +72,25 @@ const Reviews = () => {
     
 
 ]
+const[blog,setBlog]=useState()
+const getData = async() =>{ 
+    const url='https://onmyscreen-backend.onrender.com/blogs'
+    const response = await fetch(url)
+    const data = await response.json()
+    
+setBlog(data?.blogs)
+console.log(blog,data)
+
+
+}
+
+useEffect(() => {
+  getData()
+
+ 
+}, [])
+
+
 
 
 
@@ -80,10 +99,11 @@ const Reviews = () => {
       <div className='start'>
       <div className='reviews'><h1>REVIEWS</h1></div>
         <div className='card-section'>
-        {data.map((blogData) => {
+        {blog?.map((blogData) => {
                     return (
                         
-                        <Card key={blogData.id} shortdescription={blogData.shortdescription} imageurl={blogData.imageUrl} title={blogData.title} Date={blogData.Date} />
+                        <Card key={blogData.id} shortdescription={blogData.shortDescription} imageurl={blogData.bannerImgLink
+                        } title={blogData.title} Date={blogData.createdAt} />
                        
                     )
                 })}

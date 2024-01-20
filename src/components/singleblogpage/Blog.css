@@ -6,6 +6,12 @@ flex-direction: column;
 /*padding-left: 100px;*/
 padding-top: 70px;
 margin-left: 10rem;
+@media  screen and (max-width:768px) {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  
+}
 }
 
 .blog-meta{
@@ -16,6 +22,9 @@ margin-left: 10rem;
 .blog-content{
     color: white;
     font-size: 15px;
+    p{
+      font-family:  avenir-lt-w01_35-light1475496;
+    }
 
 }
  .blog-image{
