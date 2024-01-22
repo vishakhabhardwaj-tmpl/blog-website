@@ -17,7 +17,7 @@ const SectionWithForm = () => {
       lastName: lastname,
       email: email,
     };
-    const url = "https://onmyscreen-backend.onrender.com/blogs/subscriber/";
+    const url = "https://onmyscreen-backend.onrender.com/subscriber/";
     const savedata = await fetch(url, {
       method: "POST",
       headers: {           'Content-Type': 'application/json',    },

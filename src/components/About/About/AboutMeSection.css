@@ -30,10 +30,10 @@
     padding: 40px;
     gap: 5rem;
     margin-right: 40px;
-    @media screen and (max-width:768px) {
+     @media screen and (max-width:768px) {
         display: flex;
         flex-direction: column;
-      }
+      } 
   }
   
   .author-image {
@@ -41,9 +41,10 @@
     width: 100%;
     height: 100%!important;
     flex-grow: 5;
+    overflow: hidden;
   }
   
-  .author-image img {
+  .author-image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -77,11 +78,6 @@
     
   }
 
-  .author-description{
-    h3{
-        white-space: nowrap;
-    }
-  }
 
 
   .aboutdescription{
