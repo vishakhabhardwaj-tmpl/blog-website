@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -56,14 +56,28 @@ const ForeverMoviesSection = () => {
         prevArrow: <SlickPrevArrow />,
         nextArrow: <SlickNextArrow />,
       };
+      const[movie,setMovie]=useState()
+      const getmovie = async() =>{
+        const url ='https://onmyscreen-backend.onrender.com/blogs'
+        const response = await fetch(url)
+        const data = await response.json()
+        setMovie(data?.favMovieData )
+        console.log(movie,data)
+      }
+      useEffect(() => {
+      getmovie()
+      
+        
+      }, [])
+      
   return (
     <div className='MovieForever'>
         <h2 className='heading'>THE MOVIES I CAN WATCH FOREVER</h2>
       <hr />
       <Slider {...settings}>
-        {movies.map((movies, index) => (
+        {movie?.map((movies, index) => (
           <div key={index} className="movies-container">
-            <img src={movies.imageUrl} alt={movies.title} />
+            <img src={movies.movieImage} alt={movies.title} />
             </div>
         ))}
       </Slider>
