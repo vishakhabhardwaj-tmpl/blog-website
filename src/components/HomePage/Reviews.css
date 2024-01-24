@@ -1,46 +1,52 @@
-
-
-.start{
-
-    width: 100%;
-    
-
+.start {
+  width: 100%;
 }
-.reviews{
-    color: white;
-    padding: 0px;
- 
-    h1 {
-margin: 0;
-@media only screen and (min-width: 820px)
-{
-    font-size: 150px;
-}
-@media(width:768px){
-    font-size: 200px;
-    line-height: 0.96em;
-}
- @media screen and (max-width: 760px) {
-    font-size: 50px;
-} 
-padding-top:70px;
-line-height: 0.96em;
-text-align: start;
-justify-content: flex-start;
+.reviews {
+  color: white;
+  padding: 0px;
+
+  h1 {
+    margin: 0;
+    @media only screen and (min-width: 820px) {
+      font-size: 200px;
     }
+    @media (width: 768px) {
+      font-size: 200px;
+      line-height: 0.96em;
+    }
+    @media screen and (max-width: 760px) {
+      font-size: 50px;
+    }
+    padding-top: 70px;
+    line-height: 0.96em;
+    text-align: start;
+    justify-content: flex-start;
+  }
 }
-.card-section{
+.card-section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+/* .mobile-card-section {
+  @media screen and (max-width: 450px) {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    flex-wrap: wrap;
-    padding-top: 30px;
-   
-    
-}
-
-
-
-
-
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    .row-wise {
+      display: flex;
+    }
+    .column-wise {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+} */
