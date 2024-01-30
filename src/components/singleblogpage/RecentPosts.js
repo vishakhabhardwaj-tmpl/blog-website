@@ -48,19 +48,20 @@ const RecentPosts = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 1,
-    centerMode: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          dots: true,
+          // centerMode: true,
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          dots: false,
         },
       },
     ],

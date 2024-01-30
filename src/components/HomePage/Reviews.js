@@ -100,7 +100,7 @@ const Reviews = () => {
   useEffect(() => {
     getData();
   }, []);
-
+  console.log(blog, "blog");
   return (
     <div>
       <div className="start">
@@ -111,7 +111,8 @@ const Reviews = () => {
           {blog?.map((blogData) => {
             return (
               <Card
-                key={blogData.id}
+                key={blogData?.id}
+                id={blogData?.id}
                 shortdescription={blogData.shortDescription}
                 imageurl={blogData.bannerImgLink}
                 title={blogData.title}

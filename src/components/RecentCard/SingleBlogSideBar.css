@@ -1,123 +1,109 @@
+.singlesidebar {
+  background-color: #161516;
+  color: white;
+  width: 40%;
+  padding-right: 40px;
+  padding-left: 30px;
+  margin-top: 60px;
+  font-weight: 10;
+  padding-bottom: 30px;
+  margin-left: 4rem;
+  height: max-content;
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 100;
+  font-style: normal;
+  justify-content: flex-start;
 
-  .singlesidebar{
-    background-color: #161516;
-    color: white;
-    width: 40%;
-    padding-right: 40px;
-    padding-left: 30px;
-    margin-top: 60px;
-    font-weight: 10;
-    padding-bottom: 30px;
-    gap: 1rem;
-    margin-left: 4rem;
-
-  }
-  .about-me{
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
-    font-weight: 100;
-    font-style: normal;
-    justify-content: flex-start;
-
-     hr{
-        width: 100%;
-          background-color: 0.5px light white;
-          display: flex;
-           
-
-        }
-    h2{
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 0px;
-    }
-    p{
-        font-size: small;
-        font-weight: 50;
-        font-style: normal;
-    }
-    button{
-        border: 1px solid white;
-        padding: 10px 20px;
-    }
-  }
-
-  .about-me button{
-    background-color: #161516;
-    color: white;
-    padding: 10px 15px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-
-    &:hover{
-        background-color: red;
-    }
-  }
-  .imageauthor{
-    border: none;
-    border-radius: none;
-  }
-
-  .imageauthor>img{
+  hr {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-color: 0.5px light white;
+    display: flex;
   }
-  .postarchieve{
-    background-color: #161516;
-    
-    button{
-        margin-top: 10px;
-        margin-bottom: 10px;
+  h2 {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: small;
+    font-weight: 50;
+    font-style: normal;
+  }
+  button {
+    border: 1px solid white;
+    padding: 10px 20px;
+  }
+}
+
+.about-me button {
+  background-color: #161516;
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: red;
+  }
+}
+.imageauthor {
+  border: none;
+  border-radius: none;
+}
+
+.imageauthor > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.postarchieve {
+  background-color: #161516;
+
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: white;
     color: black;
     padding: 10px 12px;
     font-weight: lighter;
-
-
-
-    }
-
-    h2{
-        margin-bottom: 0px;
-    }
-  }
-  .tags{
-    background-color: #161516;
-    h2{
-        margin-bottom: 0px;
-    }
-
-    hr{
-        font-weight: lighter;
-    }
-    button{
-        background-color: white;
-        border: 1px solid black;
-        color: black;
-        font-weight: lighter;
-        padding: 10px 15px;
-
-        &:hover{
-            background-color: red;
-            color: white;
-            border: 1px solid white;
-        }
-         }
   }
 
-  .tagbuttons{
+  h2 {
+    margin-bottom: 0px;
+  }
+}
+.tags {
+  background-color: #161516;
+  h2 {
+    margin-bottom: 0px;
+  }
+
+  hr {
+    font-weight: lighter;
+  }
+  button {
+    background-color: white;
+    border: 1px solid black;
     color: black;
     font-weight: lighter;
     padding: 10px 15px;
-    display: flex;
-    gap: 5px;
-    
 
-
+    &:hover {
+      background-color: red;
+      color: white;
+      border: 1px solid white;
+    }
   }
+}
 
-
-
-  
+.tagbuttons {
+  color: black;
+  font-weight: lighter;
+  padding: 10px 15px;
+  display: flex;
+  gap: 5px;
+}
