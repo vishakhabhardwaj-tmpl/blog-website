@@ -1,14 +1,17 @@
 .singlesidebar {
   background-color: #161516;
   color: white;
-  width: 40%;
+  width: 50%;
   padding-right: 40px;
   padding-left: 30px;
   margin-top: 60px;
   font-weight: 10;
   padding-bottom: 30px;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
   height: max-content;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
 }
 .about-me {
   display: flex;
@@ -29,9 +32,17 @@
     margin-bottom: 0px;
   }
   p {
-    font-size: small;
-    font-weight: 50;
-    font-style: normal;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
+      sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
   }
   button {
     border: 1px solid white;
