@@ -50,3 +50,22 @@
     }
   }
 } */
+
+/* Mobile-specific styles using media query */
+@media only screen and (max-width: 767px) {
+  .card-section {
+    display: none; /* Hide the default card section on mobile */
+  }
+
+  .mobile-review-section {
+    display: flex;
+    flex-direction: column;
+    /* Add your styles for the mobile review section here */
+  }
+}
+
+.mobile-review-section {
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}

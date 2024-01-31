@@ -1,5 +1,4 @@
-
-import React, {useState,useEffect}from "react";
+import React, { useState, useEffect } from "react";
 import "./AboutMeSection.css";
 
 const AboutMeSection = () => {
@@ -10,20 +9,17 @@ const AboutMeSection = () => {
   const redirectToHomepage = () => {
     window.location.href = "/";
   };
-const[aboutData,setAboutData]= useState()
-const getabout = async()=>{
-    const url ='https://onmyscreen-backend.onrender.com/blogs/about'
-    const about = await fetch(url)
-    const data = await about.json()
-    setAboutData(data)
-    console.log(aboutData,data)
-
-}
-useEffect(() => {
-  getabout()
-
-
-}, [])
+  const [aboutData, setAboutData] = useState();
+  const getabout = async () => {
+    const url = "https://onmyscreen-backend.onrender.com/blogs/about";
+    const about = await fetch(url);
+    const data = await about.json();
+    setAboutData(data);
+    console.log(aboutData, data);
+  };
+  useEffect(() => {
+    getabout();
+  }, []);
 
   return (
     <div className="about-me-section">

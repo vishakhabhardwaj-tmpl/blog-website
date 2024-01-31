@@ -1,0 +1,80 @@
+/* .mobile-card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.mobile-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-card-image {
+  display: flex;
+}
+.mobile-card-image img {
+  width: 200px;
+} */
+
+.mobile-card {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+  gap: 5px;
+}
+
+.mobile-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mobile-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.mobile-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.mobile-card-date {
+  font-size: 10px;
+  color: white;
+  font-weight: lighter;
+  margin-bottom: 8px;
+  font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif;
+}
+
+.mobile-card-image {
+  width: 80px;
+  overflow: hidden;
+}
+
+.mobile-card-image img {
+  width: 80px;
+  height: 80px;
+  @media screen and (max-width: 450px) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin: 10px 0;
+}

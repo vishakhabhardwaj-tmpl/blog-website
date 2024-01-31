@@ -34,7 +34,9 @@ export default Navbar; */
 import React, { useEffect, useState } from "react";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import "../Navbar/navbar.css";
+
 import { Link, useParams } from "react-router-dom";
+import logoImage from "../../image/image.png";
 
 function Navbar() {
   const pathname = useParams();
@@ -72,8 +74,7 @@ function Navbar() {
       <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
         <div className="logo">
           <Link to="/">
-            {" "}
-            <h2>ONMYSCREEN</h2>{" "}
+            <img src={logoImage} alt="ONMYSCREEN" />{" "}
           </Link>
         </div>
         <div className="search">
@@ -87,7 +88,7 @@ function Navbar() {
           <span className="search-icon material-symbols-outlined">
             <FaSearch />
           </span>
-          {suggestions != "" ? (
+          {suggestions !== "" ? (
             <div className="suggestionborder" style={{ color: "white" }}>
               <div className="innerbox">
                 {" "}
