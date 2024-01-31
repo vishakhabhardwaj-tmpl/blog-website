@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../Cards/Card";
+import MobileReviewSection from "./MobileReviewSection";
 import "./Reviews.css";
 
 const Reviews = () => {
@@ -135,6 +136,7 @@ const Reviews = () => {
             );
           })}
         </div> */}
+        <MobileReviewSection blog={blog} />
       </div>
     </div>
   );
