@@ -6,6 +6,9 @@
   color: white;
   padding-top: 30px;
   font-size: 14px;
+  @media screen and (max-width: 450px) {
+    padding-inline: 10px;
+  }
 }
 
 .logo img {
@@ -183,7 +186,7 @@ a {
       color: white;
       outline: none;
       border: none;
-      font-size: 30px;
+      font-size: 25px;
     }
     ::placeholder {
       color: white;
@@ -237,4 +240,10 @@ a {
 
 .nav-links li a:hover {
   color: red;
+}
+
+@media screen and (max-width: 450px) {
+  .mobilesearch {
+    padding-inline: 10px;
+  }
 }

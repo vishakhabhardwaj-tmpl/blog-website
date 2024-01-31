@@ -31,12 +31,13 @@ hr {
   direction: ltr;
   height: 450px;
   box-sizing: border-box;
+
   /* padding-left: 1rem; */
 }
 .imagees-container > img {
   object-fit: cover;
   height: 450px;
-  width: 100%;
+  width: 97%;
 }
 .image-overlay {
   position: absolute;
