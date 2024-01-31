@@ -5,12 +5,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./RatingSection.css";
 
-const SlickPrevArrow = ({ onClick }) => (
-  <div className="slick-arrow slick-prev" onClick={onClick}></div>
+const CustomPrevArrow = ({ onClick }) => (
+  <div className="custom-arrow custom-prev" onClick={onClick}>
+    &#8249;
+  </div>
 );
-const SlickNextArrow = ({ onClick }) => (
-  <div className="slick-arrow slick-next" onClick={onClick}></div>
+
+const CustomNextArrow = ({ onClick }) => (
+  <div className="custom-arrow custom-next" onClick={onClick}>
+    &#8250;
+  </div>
 );
+
+// const SlickPrevArrow = ({ onClick }) => (
+//   <div className="slick-arrow slick-prev" onClick={onClick}></div>
+// );
+// const SlickNextArrow = ({ onClick }) => (
+//   <div className="slick-arrow slick-next" onClick={onClick}></div>
+// );
 
 const RatingSection = () => {
   const images = [
@@ -51,7 +63,7 @@ const RatingSection = () => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 1.3, // Adjust as needed
+    slidesToShow: 1.3,
     slidesToScroll: 1,
     centerMode: false,
     responsive: [
@@ -69,8 +81,8 @@ const RatingSection = () => {
       },
     ],
 
-    prevArrow: <SlickPrevArrow />,
-    nextArrow: <SlickNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
   const [rating, setRating] = useState();
   const getrating = async () => {

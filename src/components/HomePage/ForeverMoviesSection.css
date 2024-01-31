@@ -2,7 +2,7 @@ body {
   margin-top: 100px;
 }
 .MovieForever {
-  width: 100%;
+  width: 98%;
   height: 100%;
 
   color: white;
@@ -35,7 +35,7 @@ hr {
 }
 
 .movies-container > img {
-  width: 100%;
+  width: 96%;
   height: 100%;
   object-fit: cover;
 }
@@ -83,6 +83,7 @@ hr {
 
 .slick-prev,
 .slick-next {
+  display: none;
   font-size: 24px;
   color: #fff;
   position: absolute;

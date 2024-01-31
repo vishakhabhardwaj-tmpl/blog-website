@@ -118,6 +118,7 @@ const Reviews = () => {
                 imageurl={blogData.bannerImgLink}
                 title={blogData.title}
                 Date={blogData.createdAt}
+                readTime={blogData.readTime}
               />
             );
           })}
