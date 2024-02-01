@@ -2,7 +2,7 @@
 
 .section-with-form {
   display: flex;
-  width: 98%;
+  width: 100%;
   flex-direction: row;
   gap: 1rem;
   margin-top: 80px;
