@@ -7,11 +7,11 @@
 
   h1 {
     margin: 0;
-    @media only screen and (min-width: 820px) {
+    @media only screen and (min-width: 968px) {
       font-size: 200px;
     }
-    @media (width: 768px) {
-      font-size: 200px;
+    @media (min-width: 768px) {
+      font-size: 150px;
       line-height: 0.96em;
     }
     @media screen and (max-width: 760px) {
