@@ -85,9 +85,11 @@ function Navbar() {
             value={suggestions}
             onChange={handleChange}
           />
-          <span className="search-icon material-symbols-outlined">
-            <FaSearch />
-          </span>
+          {suggestions === "" ? (
+            <span className="search-icon material-symbols-outlined">
+              <FaSearch />
+            </span>
+          ) : null}
           {suggestions !== "" ? (
             <div className="suggestionborder" style={{ color: "white" }}>
               <div className="innerbox">

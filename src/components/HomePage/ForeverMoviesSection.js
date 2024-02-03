@@ -5,13 +5,13 @@ import "slick-carousel/slick/slick-theme.css";
 import "./ForeverMoviesSection.css";
 
 const CustomPrevArrow = ({ onClick }) => (
-  <div className="custom-arrow custom-prev" onClick={onClick}>
+  <div className="custom-prev2" onClick={onClick}>
     &#8249;
   </div>
 );
 
 const CustomNextArrow = ({ onClick }) => (
-  <div className="custom-arrow custom-next" onClick={onClick}>
+  <div className="custom-next2" onClick={onClick}>
     &#8250;
   </div>
 );

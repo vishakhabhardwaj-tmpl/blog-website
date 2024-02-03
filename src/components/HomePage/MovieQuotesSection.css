@@ -1,11 +1,11 @@
 .movie-quotes-section {
-  margin-top: 5rem;
   height: 100%;
   background-color: black;
   width: 100%;
 }
 
 .movie-quotes-section h2 {
+  margin-top: 100px;
   font-size: 24px;
   margin-left: 20px;
   margin-bottom: 10px;
@@ -14,17 +14,22 @@
 }
 
 .movie-quotes-section hr {
-  margin: 20px 20px;
+  margin: 14px 14px;
   border: 1px solid #ccc;
 }
 .quote-container {
+  display: flex !important;
   background-color: #161515;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 250px;
+  height: 500px;
   color: white;
-  display: flex;
   flex-direction: column;
-  padding-top: 150px;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 150px; */
+  @media screen and (max-width: 450px) {
+    height: 350px;
+  }
 }
 
 .quote-text {
@@ -32,8 +37,14 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 40px;
+  align-self: center;
+  padding-inline: 40px;
+  font-size: 60px;
   font-weight: bold;
+
+  @media screen and (max-width: 450px) {
+    font-size: 30px;
+  }
 }
 
 .movie-name {
@@ -52,39 +63,21 @@
   }
 }
 
-.movie-quotes-section {
-  position: relative;
-}
-
 .slick-dots {
   position: absolute;
-  bottom: 10px; /* Adjust the distance from the bottom as needed */
+  bottom: 10px;
   width: 100%;
   list-style: none;
   text-align: center;
   padding: 0;
   margin: 0;
+  color: #fff;
 }
 
-.slick-dots li {
-  display: inline-block;
-  margin: 0 3px; /* Adjust the spacing between dots as needed */
-}
-
-/*.slick-dots li button {
-    font-size: 12px; 
-    color: #fff; 
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    padding: 5px;
-    outline: none;
-  }*/
-
-.slick-dots li.slick-active button {
-  background: #fff; /* Adjust the background color of the active dot as needed */
+/* .slick-dots li.slick-active button {
+  background: #fff; 
   border-radius: 50%;
-}
+} */
 
 .custom-arrow {
   position: absolute;
