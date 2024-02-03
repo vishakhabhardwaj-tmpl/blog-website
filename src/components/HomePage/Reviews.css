@@ -6,12 +6,12 @@
   padding: 0px;
 
   h1 {
-    margin: 0;
+    margin-bottom: 50px;
     @media only screen and (min-width: 968px) {
-      font-size: 200px;
+      font-size: 150px;
     }
     @media (min-width: 768px) {
-      font-size: 150px;
+      font-size: 200px;
       line-height: 0.96em;
     }
     @media screen and (max-width: 760px) {
@@ -76,7 +76,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1533px) {
   .card-section {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1532px) {
   .card-section {
     display: grid;
     grid-template-columns: 1fr 1fr;

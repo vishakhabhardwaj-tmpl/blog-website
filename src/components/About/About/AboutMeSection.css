@@ -1,125 +1,108 @@
-
-  .about-me-section {
-    text-align: center;
-    h2{
-        text-align: start;
-        font-size: 30px;
-        color: white;
-        margin-left: 10px;
-        @media screen and (min-width:768px) and (max-width:1600px) {
-            font-size: 18px;
-          }
-    
+.about-me-section {
+  text-align: center;
+  h2 {
+    text-align: start;
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+    @media screen and (min-width: 768px) and (max-width: 1600px) {
+      font-size: 18px;
     }
-    
   }
-  
- 
-  
-  hr {
-    width: 98%;
-    margin: 10px auto;
-    border: 1px light #ddd;
-  }
-  
-  .author-section {
-    display: grid;
-    grid-template-columns: repeat(1,1fr 1fr);
-    align-items: center;
-    justify-content: center;
-    padding: 40px;
-    gap: 5rem;
-    margin-right: 40px;
-     @media screen and (max-width:768px) {
-        display: flex;
-        flex-direction: column;
-      } 
-  }
-  
-  .author-image {
+}
+
+hr {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px light #ddd;
+  opacity: 0.5;
+}
+
+.author-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr 1fr);
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 5rem;
+  margin-right: 40px;
+  @media screen and (max-width: 768px) {
     display: flex;
-    width: 100%;
-    height: 100%!important;
-    flex-grow: 5;
-    overflow: hidden;
+    flex-direction: column;
   }
-  
-  .author-image img{
+}
+
+.author-image {
+  display: flex;
+  width: 100%;
+  height: 100% !important;
+  flex-grow: 5;
+  overflow: hidden;
+}
+
+.author-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: 768px) and (max-width: 1200px) {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
-    @media(min-width:768px) and (max-width:1200px) {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        
-    }
-    
-    
   }
-  
-  .author-description {
-    text-align: left;
-    color: white;
-    justify-content: flex-start;
-    width: 100%;
-    @media screen and (max-width:768px) {
-            
-        
-        display: flex;
-        flex-direction: column;
-      }
-      @media screen and (min-width:768px) and (max-width:1600px) {
-        font-size: 18px;
-        margin-top: 80px;
-      }
-    
-    
+}
+
+.author-description {
+  text-align: left;
+  color: white;
+  justify-content: flex-start;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
-
-
-
-  .aboutdescription{
-    h2{
-        font-size: 25px;    margin-block-start: 0em;
-        margin-block-end: 0em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight:lighter;
-    }
-    p{
-        display: block;
-        margin-block-start: 0em;
-        margin-block-end: 0em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-style: 16px avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
-    }
-
-    
-
-    
+  @media screen and (min-width: 768px) and (max-width: 1600px) {
+    font-size: 18px;
+    margin-top: 80px;
   }
-  
-  h3 {
-    margin-bottom: 0px;
-    font-size: 40px;
+}
+
+.aboutdescription {
+  h2 {
+    font-size: 25px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: lighter;
+  }
+  p {
     display: block;
     margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-weight: bold;
+    font-style: 16px avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
+      sans-serif;
   }
+}
 
-  
-  .blog-button {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 30px;
-  }
- 
+h3 {
+  margin-bottom: 0px;
+  font-size: 40px;
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.blog-button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+}

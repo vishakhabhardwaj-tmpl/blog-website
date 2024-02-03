@@ -47,6 +47,7 @@
   border-top: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
+  border-bottom: 1px solid white;
 }
 .suggestionborder {
   position: absolute;
@@ -54,10 +55,10 @@
   display: flex;
   flex-direction: column;
   top: 44px;
-  height: 200px;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
+
   background-color: black;
   overflow-y: auto;
   width: 261px;
@@ -221,6 +222,11 @@ a {
   width: 400px;
   left: 113px;
 
+  @media (min-width: 451px) and (max-width: 767px) {
+    width: 567px;
+    left: 122px;
+  }
+
   ul {
     position: absolute;
     top: 77px;
@@ -230,6 +236,9 @@ a {
     gap: 1rem;
     font-size: 20px;
     margin-top: 40px;
+    @media (min-width: 451px) and (max-width: 767px) {
+      left: 297px;
+    }
   }
 }
 
