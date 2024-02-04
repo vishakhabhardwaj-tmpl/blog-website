@@ -1,0 +1,35 @@
+.custom-prev-arrow {
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%);
+  font-size: 57px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  transition: none;
+  width: 23px;
+
+  height: 39px;
+  z-index: 2;
+  left: 10px;
+}
+.custom-next-arrow {
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%);
+  font-size: 57px;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  outline: none;
+  transition: none;
+  width: 23px;
+  padding-right: 57px;
+  height: 39px;
+  z-index: 2;
+  right: 0px;
+}

@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { FaTimes, FaExpand } from "react-icons/fa";
+import { CustomPrevArrow, CustomNextArrow } from "../CustomArrows";
+import {
+  FaTimes,
+  FaExpand,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./RatingSection.css";
+import Modal from ".././Modal";
 
-const CustomPrevArrow = ({ onClick }) => (
-  <div className="custom-prev1" onClick={onClick}>
-    &#8249;
-  </div>
-);
-
-const CustomNextArrow = ({ onClick }) => (
-  <div className="custom-next1" onClick={onClick}>
-    &#8250;
-  </div>
-);
-
-// const SlickPrevArrow = ({ onClick }) => (
-//   <div className="slick-arrow slick-prev" onClick={onClick}></div>
+// const CustomPrevArrow = ({ onClick }) => (
+//   <div className="custom-prev1" onClick={onClick}>
+//     &#8249;
+//   </div>
 // );
-// const SlickNextArrow = ({ onClick }) => (
-//   <div className="slick-arrow slick-next" onClick={onClick}></div>
+
+// const CustomNextArrow = ({ onClick }) => (
+//   <div className="custom-next1" onClick={onClick}>
+//     &#8250;
+//   </div>
 // );
 
 const RatingSection = () => {
@@ -80,11 +80,15 @@ const RatingSection = () => {
         },
       },
     ],
-
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    // prevArrow: <CustomPrevArrow />,
+    // nextArrow: <CustomNextArrow />,
   };
   const [rating, setRating] = useState();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const getrating = async () => {
     const url = "https://onmyscreen-backend.onrender.com/blogs";
     const response = await fetch(url);
@@ -95,8 +99,26 @@ const RatingSection = () => {
   useEffect(() => {
     getrating();
   }, []);
+  const openModal = (index) => {
+    setCurrentImageIndex(index);
+    setModalOpen(true);
+  };
 
-  const [open, setOpen] = useState(false);
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const goToPrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? rating.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === rating.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <>
@@ -108,7 +130,7 @@ const RatingSection = () => {
             <div
               key={index}
               className="imagees-container"
-              onClick={() => setOpen(true)}
+              onClick={() => openModal(index)}
             >
               <img src={image.ratingImage} alt={image.title} />
               <div className="image-overlay">
@@ -117,33 +139,15 @@ const RatingSection = () => {
               </div>
             </div>
           ))}
-          {/* {open ? (
-            <div className="Popup">
-              <img src={image.ratingImage} alt={image.title} />
-              <h3> {image.title}</h3>
-              <p>Rating: {image.rating}</p>
-              <button>
-                <FaExpand />
-              </button>
-              <button>
-                <FaTimes />
-              </button>
-            </div>
-          ) : null} */}
         </Slider>
-        {/* {open ? ( 
-          <div className="Popup">
-            <img src={image.ratingImage} alt={image.title} />
-            <h3> {image.title}</h3>
-            <p>Rating: {image.rating}</p>
-            <button>
-              <FaExpand />
-            </button>
-            <button>
-              <FaTimes />
-            </button>
-          </div>
-        ) : null} */}
+        {modalOpen && (
+          <Modal
+            image={rating[currentImageIndex]}
+            onClose={closeModal}
+            onPrev={goToPrevImage}
+            onNext={goToNextImage}
+          />
+        )}
       </div>
     </>
   );

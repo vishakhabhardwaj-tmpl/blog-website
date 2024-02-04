@@ -3,7 +3,7 @@ body {
 }
 .rating-section {
   width: 100%;
-  height: 650px;
+  height: 850px;
   color: white;
 }
 
@@ -22,6 +22,7 @@ body {
 
 hr {
   border: 1px light #ccc;
+  margin-bottom: 30px !important;
 }
 
 .imagees-container {
@@ -29,7 +30,7 @@ hr {
   display: flex;
   place-content: flex-start;
   direction: ltr;
-  height: 450px;
+  height: 650px;
   box-sizing: border-box;
 
   /* padding-left: 1rem; */
@@ -54,13 +55,17 @@ hr {
   color: white;
   z-index: 1;
 }
-.image-overlay h3,
-.image-overlay p {
+.image-overlay h3 {
   margin: 0;
-  font-size: 25px;
+  font-size: 46px;
 }
 
-/* .slick-arrow {
+.image-overlay p {
+  font-family: poppins-extralight, poppins, sans- !important;
+  font-size: 26px;
+}
+
+.slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -124,7 +129,7 @@ hr {
 
 .slick-next {
   right: 0;
-} */
+}
 
 /* .Popup {
   position: absolute;
@@ -135,9 +140,9 @@ hr {
   height: 100%;
 } */
 
-.custom-prev1 {
+.CustomPrevArrow {
   position: absolute;
-  top: 183px;
+  top: 50%;
   transform: translateY(-50%);
   font-size: 67px;
   cursor: pointer;
@@ -154,9 +159,9 @@ hr {
   left: 10px;
 }
 
-.custom-next1 {
+.CustomNextArrow {
   position: absolute;
-  top: 183px;
+  top: 50%;
   transform: translateY(-50%);
   font-size: 67px;
   cursor: pointer;
