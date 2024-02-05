@@ -11,17 +11,33 @@
   z-index: 1000;
   gap: 20px;
 
-  @media (max-width: 450px) {
+  @media screen and (max-width: 450px) {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     justify-self: center;
+  }
+}
+.mobile-modal-view {
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .image-button-section {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .modal-image {
@@ -39,8 +55,8 @@
   height: 416.9px;
   object-fit: cover;
   @media (max-width: 450px) {
-    width: 550px;
-    height: 350px;
+    /* width: 550px;
+    height: 350px; */
     object-fit: cover;
     display: flex;
     justify-content: center;
@@ -72,12 +88,14 @@
 
 .modalbutton > button {
   position: absolute;
-  font-size: 18px;
+  font-size: 48px;
   color: white;
   background: none;
   border: none;
   cursor: pointer;
   transition: color 0.3s;
+  stroke-width: 0;
+  font-weight: 100 !important;
   /* padding-inline: 10px; */
 }
 
@@ -116,4 +134,33 @@ button:last-child {
 
 .modal-nav-button:last-child {
   right: 30px;
+}
+
+.forever-modal-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 528px;
+  width: 758px;
+  @media screen and (max-width: 450px) {
+    height: 566px;
+    width: 320px;
+  }
+}
+.forever-modal-image > img {
+  width: 369.059px;
+  height: 528px;
+  object-fit: cover;
+}
+
+.forever-modal-content {
+  p {
+    display: flex;
+    font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
+      sans-serif;
+    font-size: 20px;
+    @media screen and (max-width: 450px) {
+      padding: 0 8px 0 8px;
+    }
+  }
 }

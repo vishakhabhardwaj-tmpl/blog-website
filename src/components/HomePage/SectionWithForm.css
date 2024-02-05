@@ -236,6 +236,9 @@
     overflow-x: hidden;
     padding-bottom: 30px;
   }
+  /* @media (width: 768px) {
+    align-self: center;
+  } */
   @media screen and (max-width: 450px) {
     padding-left: 20px;
     align-self: center;

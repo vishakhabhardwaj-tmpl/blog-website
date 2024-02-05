@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
+import { CustomPrevArrow, CustomNextArrow } from "../CustomArrows";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./ForeverMoviesSection.css";
+import Modal from "../Modal";
 
-const CustomPrevArrow = ({ onClick }) => (
-  <div className="custom-prev2" onClick={onClick}>
-    &#8249;
-  </div>
-);
+// const CustomPrevArrow = ({ onClick }) => (
+//   <div className="custom-prev2" onClick={onClick}>
+//     &#8249;
+//   </div>
+// );
 
-const CustomNextArrow = ({ onClick }) => (
-  <div className="custom-next2" onClick={onClick}>
-    &#8250;
-  </div>
-);
+// const CustomNextArrow = ({ onClick }) => (
+//   <div className="custom-next2" onClick={onClick}>
+//     &#8250;
+//   </div>
+// );
 
 // const SlickPrevArrow = ({ onClick }) => (
 //   <div className="slick-arrow slick-prev" onClick={onClick}>
@@ -81,11 +83,19 @@ const ForeverMoviesSection = () => {
           slidesToShow: 1,
         },
       },
+      // {
+      //   breakpoint: 450,
+      //   settings: {
+      //     slidesToShow: 1,
+      //   },
+      // },
     ],
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
   };
   const [movie, setMovie] = useState();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const getmovie = async () => {
     const url = "https://onmyscreen-backend.onrender.com/blogs";
     const response = await fetch(url);
@@ -96,6 +106,26 @@ const ForeverMoviesSection = () => {
   useEffect(() => {
     getmovie();
   }, []);
+  const openModal = (index) => {
+    setCurrentImageIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const goToPrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? movie?.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === movie?.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
     <div className="MovieForever">
@@ -103,11 +133,24 @@ const ForeverMoviesSection = () => {
       <hr />
       <Slider {...settings}>
         {movie?.map((movies, index) => (
-          <div key={index} className="movies-container">
+          <div
+            key={index}
+            className="movies-container"
+            onClick={() => openModal(index)}
+          >
             <img src={movies.movieImage} alt={movies.title} />
           </div>
         ))}
       </Slider>
+      {modalOpen && (
+        <Modal
+          image={movie[currentImageIndex]}
+          onClose={closeModal}
+          onPrev={goToPrevImage}
+          onNext={goToNextImage}
+          foreverModal
+        />
+      )}
     </div>
   );
 };
