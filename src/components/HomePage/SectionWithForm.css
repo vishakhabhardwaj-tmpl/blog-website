@@ -231,18 +231,19 @@
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    padding-right: 40px;
+    padding-right: 0;
     width: 65%;
     overflow-x: hidden;
     padding-bottom: 30px;
+    align-self: center;
   }
   /* @media (width: 768px) {
     align-self: center;
   } */
   @media screen and (max-width: 450px) {
-    padding-left: 20px;
+    /* padding-left: 20px; */
     align-self: center;
-    padding-right: 10px;
+    /* padding-right: 10px; */
   }
 }
 
@@ -253,12 +254,12 @@
   cursor: pointer;
   font-family: "16px avenir-lt-w01_35-light1475496", sans-serif;
   font-size: 14px;
-  height: 1.4em;
+  height: 1.8em;
   font-weight: lighter;
-  padding-left: 28px;
-  padding-right: 28px;
-  padding-top: 6px;
-  padding-bottom: 22px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 12px;
+  padding-bottom: 30px;
 }
 
 .subscribe:hover {
