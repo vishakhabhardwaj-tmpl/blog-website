@@ -93,15 +93,21 @@ const ForeverMoviesSection = () => {
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
   };
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
   const getmovie = async () => {
+    setLoading(true);
     const url = "https://onmyscreen-backend.onrender.com/blogs";
     const response = await fetch(url);
     const data = await response.json();
-    setMovie(data?.favMovieData);
-    console.log(movie, data);
+
+    if (data) {
+      setMovie(data?.favMovieData);
+      console.log(movie, data);
+      setLoading(false);
+    }
   };
   useEffect(() => {
     getmovie();
@@ -131,17 +137,21 @@ const ForeverMoviesSection = () => {
     <div className="MovieForever">
       <h2 className="heading">THE MOVIES I CAN WATCH FOREVER</h2>
       <hr />
-      <Slider {...settings}>
-        {movie?.map((movies, index) => (
-          <div
-            key={index}
-            className="movies-container"
-            onClick={() => openModal(index)}
-          >
-            <img src={movies.movieImage} alt={movies.title} />
-          </div>
-        ))}
-      </Slider>
+      {loading ? (
+        <span>loading...</span>
+      ) : (
+        <Slider {...settings}>
+          {movie?.map((movies, index) => (
+            <div
+              key={index}
+              className="movies-container"
+              onClick={() => openModal(index)}
+            >
+              <img src={movies.movieImage} alt={movies.title} />
+            </div>
+          ))}
+        </Slider>
+      )}
       {modalOpen && (
         <Modal
           image={movie[currentImageIndex]}

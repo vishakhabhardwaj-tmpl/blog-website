@@ -196,6 +196,8 @@ a {
 
   .mobile-search {
     color: white;
+
+    padding-right: 7px;
   }
   .nav-links {
     display: none;
