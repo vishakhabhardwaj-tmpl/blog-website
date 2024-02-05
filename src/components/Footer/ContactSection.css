@@ -20,6 +20,9 @@
   @media screen and (max-width: 768px) {
     width: 100%;
   }
+  @media screen and (max-width: 450px) {
+    height: 300px;
+  }
 }
 
 .name {
@@ -73,6 +76,12 @@
   font-weight: lighter;
   font-family: "16px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light",
     sans-serif;
+  @media screen and (max-width: 450px) {
+    height: 600px;
+    padding-inline: 5px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
 }
 
 form {
@@ -100,6 +109,8 @@ form {
   @media screen and (max-width: 768px) {
     flex-direction: column;
     padding: 0px;
+  }
+  @media screen and (max-width: 450px) {
   }
 }
 .firstnamee {
@@ -204,6 +215,9 @@ form {
     align-items: center;
     justify-content: center;
   }
+  @media screen and (max-width: 450px) {
+    align-self: center;
+  }
 }
 
 .form-line.submit-line button {
@@ -227,7 +241,7 @@ form {
     align-self: center;
   }
   @media screen and (min-width: 320px) and (max-width: 690px) {
-    margin-left: 110px;
+    /* margin-left: 110px; */
     align-self: center;
   }
 }
