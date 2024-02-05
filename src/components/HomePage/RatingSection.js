@@ -146,6 +146,7 @@ const RatingSection = () => {
             onClose={closeModal}
             onPrev={goToPrevImage}
             onNext={goToNextImage}
+            ratingModal
           />
         )}
       </div>

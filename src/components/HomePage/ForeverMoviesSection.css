@@ -99,7 +99,7 @@ hr {
 .slick-next {
   right: 0;
 } */
-.custom-prev2 {
+.CustomPrevArrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -117,7 +117,7 @@ hr {
   z-index: 2;
   left: 10px;
 }
-.custom-next2 {
+.CustomNextArrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

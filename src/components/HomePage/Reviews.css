@@ -10,7 +10,10 @@
     @media only screen and (min-width: 968px) {
       font-size: 150px;
     }
-    @media (min-width: 768px) {
+    @media (width: 768px) {
+      font-size: 150px;
+    }
+    @media (min-width: 769px) {
       font-size: 200px;
       line-height: 0.96em;
     }
