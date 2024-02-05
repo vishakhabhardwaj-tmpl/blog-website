@@ -85,16 +85,21 @@ const RatingSection = () => {
     // prevArrow: <CustomPrevArrow />,
     // nextArrow: <CustomNextArrow />,
   };
-  const [rating, setRating] = useState();
+  const [rating, setRating] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const getrating = async () => {
+    setLoading(true);
     const url = "https://onmyscreen-backend.onrender.com/blogs";
     const response = await fetch(url);
     const data = await response.json();
-    setRating(data?.ratingsData);
-    console.log(rating, data);
+    if (data) {
+      setRating(data?.ratingsData);
+      console.log(rating, data);
+      setLoading(false);
+    }
   };
   useEffect(() => {
     getrating();
@@ -125,21 +130,25 @@ const RatingSection = () => {
       <div className="rating-section">
         <h2 className="heading">ON MY SCREEN RATING</h2>
         <hr />
-        <Slider {...settings}>
-          {rating?.map((image, index) => (
-            <div
-              key={index}
-              className="imagees-container"
-              onClick={() => openModal(index)}
-            >
-              <img src={image.ratingImage} alt={image.title} />
-              <div className="image-overlay">
-                <h3>{image.title}</h3>
-                <p>Rating: {image.rating}</p>
+        {loading ? (
+          <span>loading...</span>
+        ) : (
+          <Slider {...settings}>
+            {rating?.map((image, index) => (
+              <div
+                key={index}
+                className="imagees-container"
+                onClick={() => openModal(index)}
+              >
+                <img src={image.ratingImage} alt={image.title} />
+                <div className="image-overlay">
+                  <h3>{image.title}</h3>
+                  <p>Rating: {image.rating}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        )}
         {modalOpen && (
           <Modal
             image={rating[currentImageIndex]}
