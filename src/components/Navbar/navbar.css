@@ -220,11 +220,15 @@ a {
   height: 100vh;
   top: 0;
   width: 400px;
-  left: 113px;
+  /* left: 113px; */
+  @media (max-width: 450px) {
+    left: 113px;
+  }
 
-  @media (min-width: 451px) and (max-width: 767px) {
+  @media (min-width: 451px) and (max-width: 768px) {
     width: 567px;
-    left: 122px;
+    /* left: 122px; */
+    right: 0px;
   }
 
   ul {

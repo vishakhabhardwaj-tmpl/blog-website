@@ -10,16 +10,13 @@
     @media only screen and (min-width: 968px) {
       font-size: 150px;
     }
-    @media (width: 768px) {
+
+    @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 150px;
     }
-    @media (min-width: 769px) {
-      font-size: 200px;
-      line-height: 0.96em;
-    }
+
     @media screen and (max-width: 760px) {
       font-size: 50px;
-      /* padding-top: 40px; */
     }
     @media screen and (max-width: 450px) {
       padding-left: 10px;
