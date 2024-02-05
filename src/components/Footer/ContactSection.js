@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ContactSection.css"; // Import the CSS file for styling
+import "./ContactSection.css";
 
 const ContactSection = () => {
   const [firstname, setFirstname] = useState("");
@@ -7,9 +7,42 @@ const ContactSection = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [firstnameError, setFirstnameError] = useState("");
+  const [lastnameError, setLastnameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateFirstName = (firstName) => {
+    const nameRegex = /^[A-Za-z]+$/;
+    return nameRegex.test(firstName);
+  };
+
+  const validateLastName = (lastName) => {
+    const nameRegex = /^[A-Za-z]+$/;
+    return nameRegex.test(lastName);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handlesubmit = async (e) => {
     e.preventDefault();
-    console.log(firstname, lastname, email, message);
+
+    if (!validateFirstName(firstname)) {
+      setFirstnameError("Please enter a valid first name");
+      return;
+    }
+
+    if (!validateLastName(lastname)) {
+      setLastnameError("Please enter a valid last name");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    }
 
     const postform = {
       firstName: firstname,
@@ -20,16 +53,20 @@ const ContactSection = () => {
     const url = "https://onmyscreen-backend.onrender.com/blogs/feedback/";
     const savedata = await fetch(url, {
       method: "POST",
-      headers: {           'Content-Type': 'application/json',    },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postform),
     });
-    console.log(savedata);
-    if(savedata.status === 200){
-      setFirstname('')
-      setLastname('')
-      setEmail('')
-      setMessage('')
+
+    if (savedata.status === 200) {
+      setFirstname("");
+      setLastname("");
+      setEmail("");
+      setMessage("");
     }
+
+    setFirstnameError("");
+    setLastnameError("");
+    setEmailError("");
   };
 
   return (
@@ -51,16 +88,28 @@ const ContactSection = () => {
                 <input
                   type="text"
                   value={firstname}
-                  onChange={(e) => setFirstname(e.target.value)}
+                  onChange={(e) => {
+                    setFirstname(e.target.value);
+                    setFirstnameError("");
+                  }}
                 />
+                {firstnameError && (
+                  <span className="error-message">{firstnameError}</span>
+                )}
               </div>
               <div className="lastnamee">
                 <label htmlFor="lastName">Last Name:</label>
                 <input
                   type="text"
                   value={lastname}
-                  onChange={(e) => setLastname(e.target.value)}
+                  onChange={(e) => {
+                    setLastname(e.target.value);
+                    setLastnameError("");
+                  }}
                 />
+                {lastnameError && (
+                  <span className="error-message">{lastnameError}</span>
+                )}
               </div>
             </div>
           </div>
@@ -72,8 +121,12 @@ const ContactSection = () => {
               type="email"
               required
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setEmailError("");
+              }}
             />
+            {emailError && <span className="error-message">{emailError}</span>}
           </div>
           <div className="form-line">
             <label className="label-form-line" htmlFor="Message">
