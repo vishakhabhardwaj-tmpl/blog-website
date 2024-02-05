@@ -116,6 +116,9 @@ hr {
   height: 39px;
   z-index: 2;
   left: 10px;
+  @media screen and (max-width: 450px) {
+    font-size: 34px;
+  }
 }
 .CustomNextArrow {
   position: absolute;
@@ -134,4 +137,7 @@ hr {
   height: 39px;
   z-index: 2;
   right: 10px;
+  @media screen and (max-width: 450px) {
+    font-size: 34px;
+  }
 }
