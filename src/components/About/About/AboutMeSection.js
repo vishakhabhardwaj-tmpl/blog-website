@@ -33,7 +33,10 @@ const AboutMeSection = () => {
           <h3>{aboutData?.name}</h3>
           <div className="aboutdescription">
             <h2>{aboutData?.shortDescription}</h2>
-            <p> {aboutData?.detailedDescription}</p>
+            <p className="author-description-first-p">
+              {" "}
+              {aboutData?.detailedDescription}
+            </p>
             <p> {aboutData?.detailedDescription1}</p>
           </div>
           <button onClick={redirectToHomepage} className="blog-button">

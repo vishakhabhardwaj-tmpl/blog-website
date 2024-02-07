@@ -10,7 +10,9 @@
     }
   }
 }
-
+.about-me-section > h2:hover {
+  color: red;
+}
 hr {
   width: 100%;
   margin: 10px auto;
@@ -76,15 +78,17 @@ hr {
     margin-inline-end: 0px;
     font-weight: lighter;
   }
-  p {
-    display: block;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-style: 16px avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
-      sans-serif;
-  }
+}
+
+.author-description-first-p {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 100 !important;
+  font-style: 16px avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
+    sans-serif !important;
 }
 
 h3 {
