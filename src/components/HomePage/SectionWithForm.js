@@ -20,7 +20,7 @@ const SectionWithForm = () => {
   };
 
   const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.(?=[^.]+\.[a-z]+$)[^\s@]+$/;
     return emailRegex.test(email);
   };
 
@@ -41,6 +41,12 @@ const SectionWithForm = () => {
       setEmailError("Please enter a valid email address");
       return;
     }
+    // if (!email.includes(".")) {
+    //   setEmailError(
+    //     "Please enter a valid email address with a dot (.) before 'com'"
+    //   );
+    //   return;
+    // }
 
     const postform = {
       firstName: firstname,
