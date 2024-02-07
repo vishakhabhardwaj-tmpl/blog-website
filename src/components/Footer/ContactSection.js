@@ -22,8 +22,7 @@ const ContactSection = () => {
   };
 
   const validateEmail = (email) => {
-    const emailRegex =
-      /^[a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,15})$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.(?=[^.]+\.[a-z]+$)[^\s@]+$/;
     return emailRegex.test(email);
   };
 
