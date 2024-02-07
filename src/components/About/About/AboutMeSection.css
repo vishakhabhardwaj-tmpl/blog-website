@@ -12,9 +12,9 @@
   hr {
     width: 100% !important;
     margin: 10px auto !important;
-    color: #ddd !important;
+    /* color: #ddd !important; */
     opacity: 0.5 !important;
-    height: 0px !important;
+    /* height: 0px !important; */
   }
 }
 .about-me-section > h2:hover {
