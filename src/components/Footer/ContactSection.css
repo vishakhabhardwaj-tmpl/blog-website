@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 160px;
+  margin-top: 100px;
   background-color: black;
   gap: 0.8rem;
   height: 100%;
@@ -17,6 +17,9 @@
   align-items: center;
   justify-content: center;
   margin-left: 0px;
+  @media (width<=768px) {
+    height: 320px;
+  }
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -76,6 +79,11 @@
   font-weight: lighter;
   font-family: "16px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light",
     sans-serif;
+
+  @media (width<=768px) {
+    padding-inline: 0;
+    padding-top: 36px;
+  }
   @media screen and (max-width: 450px) {
     height: 600px;
     padding-inline: 5px;

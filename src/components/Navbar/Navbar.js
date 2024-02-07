@@ -34,6 +34,7 @@ export default Navbar; */
 import React, { useEffect, useState } from "react";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import "../Navbar/navbar.css";
+import { NavLink } from "react-router-dom";
 
 import { Link, useParams } from "react-router-dom";
 import logoImage from "../../image/image.png";
@@ -129,13 +130,19 @@ function Navbar() {
           )}
           <ul className="nav-links">
             <li>
-              <Link to="/">MyBlog</Link>
+              <NavLink to="/" activeClassName="active">
+                MyBlog
+              </NavLink>
             </li>
             <li>
-              <Link to="/About">About</Link>
+              <NavLink to="/About" activeClassName="active">
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to="/Contact">Contact</Link>
+              <NavLink to="/Contact" activeClassName="active">
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -146,35 +153,56 @@ function Navbar() {
           className="mobile-search-input"
           type="search"
           placeholder="Search..."
+          value={suggestions}
+          onChange={handleChange}
         />
-        <div className="mobile-search">
-          <FaSearch />
-        </div>
+        {suggestions === "" ? (
+          <div className="mobile-search">
+            <FaSearch />
+          </div>
+        ) : null}
+        {suggestions !== "" ? (
+          <div className="suggestionbordermobile" style={{ color: "white" }}>
+            <div className="innerboxmobile">
+              {" "}
+              <h4>Blog Posts</h4>
+              {searchData?.map((e) => {
+                return (
+                  <div className="suggestionresultmobile">
+                    <div className="suggestion-image-mobile">
+                      {<img src={e.bannerImgLink} />}
+                    </div>
+                    <div className="suggestion-info-mobile">
+                      <p className="suggestiontitlemobile">{e.title}</p>
+                      <p className="suggestiondespmobile">
+                        {e.shortDescription}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ) : null}
       </div>
 
       {isMenuOpen && (
         <div className="hamburgermenu">
-          <ul>
+          <ul className="mobile-nav-links">
             <li>
-              <Link to="/" style={{ color: pathname === "" ? "red" : "white" }}>
+              <NavLink to="/" activeClassName="active">
                 MyBlog
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
-                to="/About"
-                style={{ color: pathname === "About" ? "red" : "white" }}
-              >
+              <NavLink to="/About" activeClassName="active">
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
-                to="/Contact"
-                style={{ color: pathname === "Contact" ? "red" : "white" }}
-              >
+              <NavLink to="/Contact" activeClassName="active">
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

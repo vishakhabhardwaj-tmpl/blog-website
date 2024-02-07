@@ -40,9 +40,19 @@ hr {
 }
 
 .movies-container > img {
-  width: 94%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+
+  @media (width >= 768px) {
+    width: 94%;
+  }
+}
+
+.movies-container > img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* .slick-arrow {
