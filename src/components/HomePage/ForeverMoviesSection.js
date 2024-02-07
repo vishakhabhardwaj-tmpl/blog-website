@@ -83,12 +83,12 @@ const ForeverMoviesSection = () => {
           slidesToShow: 1,
         },
       },
-      // {
-      //   breakpoint: 450,
-      //   settings: {
-      //     slidesToShow: 1,
-      //   },
-      // },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
     ],
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
@@ -97,6 +97,8 @@ const ForeverMoviesSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
   const getmovie = async () => {
     setLoading(true);
     const url = "https://onmyscreen-backend.onrender.com/blogs";
@@ -119,6 +121,7 @@ const ForeverMoviesSection = () => {
 
   const closeModal = () => {
     setModalOpen(false);
+    setExpanded(false);
   };
 
   const goToPrevImage = () => {
@@ -131,6 +134,9 @@ const ForeverMoviesSection = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === movie?.length - 1 ? 0 : prevIndex + 1
     );
+  };
+  const toggleExpand = () => {
+    setExpanded(!expanded);
   };
 
   return (
@@ -158,6 +164,8 @@ const ForeverMoviesSection = () => {
           onClose={closeModal}
           onPrev={goToPrevImage}
           onNext={goToNextImage}
+          expandedmodal={toggleExpand}
+          expanded={expanded}
           foreverModal
         />
       )}

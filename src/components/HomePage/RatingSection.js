@@ -89,6 +89,7 @@ const RatingSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const getrating = async () => {
     setLoading(true);
@@ -111,6 +112,7 @@ const RatingSection = () => {
 
   const closeModal = () => {
     setModalOpen(false);
+    setExpanded(false);
   };
 
   const goToPrevImage = () => {
@@ -123,6 +125,9 @@ const RatingSection = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex === rating.length - 1 ? 0 : prevIndex + 1
     );
+  };
+  const toggleExpand = () => {
+    setExpanded(!expanded);
   };
 
   return (
@@ -155,6 +160,8 @@ const RatingSection = () => {
             onClose={closeModal}
             onPrev={goToPrevImage}
             onNext={goToNextImage}
+            expandedmodal={toggleExpand}
+            expanded={expanded}
             ratingModal
           />
         )}
