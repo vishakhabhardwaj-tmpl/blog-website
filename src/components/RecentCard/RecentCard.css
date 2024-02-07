@@ -1,7 +1,6 @@
 .RecentCardFirst {
-  height: 200px;
-  width: 250px;
-  display: flex;
+  height: 260px;
+  width: 320px;
   @media screen and (max-width: 800px) {
     display: flex;
     margin-left: 0px;
@@ -14,5 +13,8 @@
 }
 
 .recentImage {
+  img {
+    width: 100%;
+  }
   border: none;
 }
