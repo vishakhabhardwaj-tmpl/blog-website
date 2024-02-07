@@ -26,7 +26,7 @@ body {
 }
 
 hr {
-  border: 1px light #ccc;
+  border: 1px solid #ccc;
 }
 
 .movies-container {
