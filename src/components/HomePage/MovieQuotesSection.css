@@ -27,7 +27,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding-top: 150px; */
   @media screen and (max-width: 450px) {
     height: 350px;
   }
@@ -46,6 +45,15 @@
 
   @media screen and (max-width: 450px) {
     font-size: 30px;
+    width: 300px;
+  }
+  @media screen and (width>450px) and (width<=768px) {
+    font-size: 30px;
+    width: 400px;
+  }
+  @media screen and (width>768px) and (width<1200px) {
+    font-size: 30px;
+    width: 500px;
   }
 }
 
@@ -76,10 +84,9 @@
   color: #fff;
 }
 
-/* .slick-dots li.slick-active button {
-  background: #fff; 
-  border-radius: 50%;
-} */
+.slick-dots li.slick-active button {
+  color: white;
+}
 
 .custom-arrow {
   position: absolute;
