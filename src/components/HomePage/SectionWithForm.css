@@ -1,12 +1,10 @@
-/* SectionWithForm.css */
-
 .section-with-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   width: 100%;
-  flex-direction: row;
   gap: 1rem;
+  color: red;
   margin-top: 80px;
-  /* margin-bottom: 40px; */
   font-family: light1475496, avenir-lt-w05_35-light, sans-serif;
   @media screen and (max-width: 768px) {
     display: flex;
@@ -15,46 +13,7 @@
 }
 
 .box {
-  /* background-color: red;
-    display: flex;
-    height: 550px;
-    width: 40%;
-    h2{
-
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       font-size: 45px;
-       padding-left: 15px;
-
-       @media  screen and (width:768px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 30%;
-        font-size: 30px
-        
-       }
-
-    }
-    @media(width:768px) {
-      display: flex;
-      margin-left: 0;
-      
-    }
-    @media(width:450px) {
-      width: 50%;
-      
-    }
-
-@media screen and (max-width:768px) {
-      display: flex;
-       width: 100%;
-      
-    }*/
   height: 500px;
-  width: 400px;
-
   background-color: red;
   display: flex;
   align-items: center;
@@ -81,46 +40,9 @@
 }
 
 .form {
-  /* display: flex; 
-    flex-direction: column;
-    background-color: #161515;
-    height: 550px;
-    width: 100%;
-    padding-inline: 100px;
-    @media(width:768px) {
-      display: flex;
-      flex-direction: column;
-
-      
-    }
-    @media  screen and (max-width:768px) {
-      display: flex;
-      flex-direction: column;
-      width: 65%;
-      overflow-x: hidden;
-
-      
-    }
-
-    @media(width:820px-1200px){
-   padding-inline: 50px;
-    }
-    input {
-      flex: 1;
-      width: 100%;
-      padding: 0;
-      border:none;
-      background-color: #161515;
-      color:white;
-      border-bottom:1px solid white;
-      outline: none;
-      font-size: 20px;
-    } */
-  height: 500px;
   width: 100%;
   flex: 1;
-  padding-top: 100px;
-  padding-inline: 80px;
+  padding-inline: 100px;
   box-sizing: border-box;
   justify-content: center;
   background-color: #161515;
@@ -143,11 +65,11 @@
   flex-direction: column;
   width: 100%;
 
-  @media (width>786px) {
+  /* @media (width>786px) {
     justify-content: center;
     align-items: center;
-  }
-  label {
+  } */
+  & label {
     display: block;
     margin-bottom: 30px;
     color: white;
@@ -157,7 +79,7 @@
     font-family: "16px avenir-lt-w01_35-light1475496", sans-serif;
     gap: 5rem;
   }
-  input {
+  & input {
     flex: 1;
     padding: 0;
     border: none;
@@ -166,10 +88,11 @@
     border-bottom: 1px solid white;
     outline: none;
     font-size: 14px;
+    &:hover {
+      border-bottom: 1px solid red;
+    }
   }
-  input:hover {
-    border-bottom: 1px solid red;
-  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -178,10 +101,11 @@
   }
 }
 
-.firstname {
-  width: 100%;
-}
-.lastname {
+.firstname,
+.lastname,
+.form-group {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -190,7 +114,7 @@
   justify-content: space-between;
   gap: 1.5rem;
   width: 100%;
-  label {
+  & label {
     display: block;
     margin-bottom: 30px;
     color: white;
@@ -198,9 +122,8 @@
     height: 1.4em;
     font: weight 100px;
     font-family: "16px avenir-lt-w01_35-light1475496", sans-serif;
-    gap: 5rem;
   }
-  input {
+  & input {
     flex: 1;
     padding: 0;
     border: none;
@@ -210,10 +133,12 @@
     outline: none;
     font-size: 14px;
     gap: 1rem;
+
+    &:hover {
+      border-bottom: 1px solid red;
+    }
   }
-  input:hover {
-    border-bottom: 1px solid red;
-  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -244,13 +169,9 @@
     padding-bottom: 30px;
     align-self: center;
   }
-  /* @media (width: 768px) {
-    align-self: center;
-  } */
+
   @media screen and (max-width: 450px) {
-    /* padding-left: 20px; */
     align-self: center;
-    /* padding-right: 10px; */
   }
 }
 

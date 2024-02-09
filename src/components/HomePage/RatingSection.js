@@ -12,18 +12,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./RatingSection.css";
 import Modal from ".././Modal";
 
-// const CustomPrevArrow = ({ onClick }) => (
-//   <div className="custom-prev1" onClick={onClick}>
-//     &#8249;
-//   </div>
-// );
-
-// const CustomNextArrow = ({ onClick }) => (
-//   <div className="custom-next1" onClick={onClick}>
-//     &#8250;
-//   </div>
-// );
-
 const RatingSection = () => {
   const images = [
     {
@@ -59,12 +47,21 @@ const RatingSection = () => {
     },
   ];
 
+  const [rating, setRating] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [currentslide, setCurrentslide] = useState(0);
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 1.3,
     slidesToScroll: 1,
+    afterChange: (current) => {
+      setCurrentslide(current);
+    },
     centerMode: false,
     responsive: [
       {
@@ -80,17 +77,10 @@ const RatingSection = () => {
         },
       },
     ],
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-    // prevArrow: <CustomPrevArrow />,
-    // nextArrow: <CustomNextArrow />,
+    prevArrow: currentslide !== 0 ? <CustomPrevArrow /> : null,
+    nextArrow: currentslide <= 3 ? <CustomNextArrow /> : null,
   };
-  const [rating, setRating] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [expanded, setExpanded] = useState(false);
-
+  console.log(currentslide);
   const getrating = async () => {
     setLoading(true);
     const url = "https://onmyscreen-backend.onrender.com/blogs";

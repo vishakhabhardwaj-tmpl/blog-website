@@ -32,7 +32,8 @@ function Navbar(){
 }
 export default Navbar; */
 import React, { useEffect, useState } from "react";
-import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
 import "../Navbar/navbar.css";
 import { NavLink } from "react-router-dom";
 
@@ -88,7 +89,7 @@ function Navbar() {
           />
           {suggestions === "" ? (
             <span className="search-icon material-symbols-outlined">
-              <FaSearch />
+              <CiSearch />
             </span>
           ) : null}
           {suggestions !== "" ? (
@@ -106,10 +107,6 @@ function Navbar() {
                         <p className="suggestiontitle">{e.title}</p>
                         <p className="suggestiondesp">{e.shortDescription}</p>
                       </div>
-                      {/* {e.title} */}
-                      {/* <span>{e.id}</span> */}
-                      {/* <span>{e.shortDescription}</span> */}
-                      {/* <span>{<img src={e.bannerImgLink} />}</span> */}
                     </div>
                   );
                 })}
@@ -158,7 +155,7 @@ function Navbar() {
         />
         {suggestions === "" ? (
           <div className="mobile-search">
-            <FaSearch />
+            <CiSearch />
           </div>
         ) : null}
         {suggestions !== "" ? (

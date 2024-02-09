@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { IoCloseOutline } from "react-icons/io5";
+import { RxCross1 } from "react-icons/rx";
 import "./Modal.css";
-import { GrExpand } from "react-icons/gr";
+import { BsArrowsAngleExpand } from "react-icons/bs";
 
 const Modal = ({
   image,
@@ -28,13 +29,10 @@ const Modal = ({
   };
 
   return (
-    <div className={`Popup ${expanded ? "expanded" : ""}`} ref={modalRef}>
+    <div className="Popup ${expanded ? 'expanded' : ''}" ref={modalRef}>
       <div className="image-button-section">
-        <button className="modal-nav-button" onClick={onPrev}>
-          <FaChevronLeft />
-        </button>
         <div className="mobile-modal-view">
-          {ratingModal ? (
+          {ratingModal && (
             <div
               className={`modal-image ${
                 expanded ? "expanded-modal-image" : ""
@@ -42,9 +40,15 @@ const Modal = ({
               ref={modalRef}
             >
               <img src={image.ratingImage} alt={image.title} />
+              <button className="modal-nav-button" onClick={onPrev}>
+                <SlArrowLeft />
+              </button>
+              <button className="modal-nav-button2" onClick={onNext}>
+                <SlArrowRight />
+              </button>
             </div>
-          ) : null}
-          {foreverModal ? (
+          )}
+          {foreverModal && (
             <div
               className={`forever-modal-image ${
                 expanded ? "expanded-modal-image" : ""
@@ -52,20 +56,21 @@ const Modal = ({
               ref={modalRef}
             >
               <img src={image.movieImage} alt={image.title} />
+              <button className="modal-nav-button" onClick={onPrev}>
+                <SlArrowLeft />
+              </button>
+              <button className="modal-nav-button2" onClick={onNext}>
+                <SlArrowRight />
+              </button>
             </div>
-          ) : null}
-
-          <button className="modal-nav-button" onClick={onNext}>
-            <FaChevronRight />
-          </button>
-        </div>
+          )}
+        </div>{" "}
         {ratingModal && !expanded ? (
           <div className="modal-content">
             <h3>{image.title}</h3>
             <p>Rating: {image.rating}</p>
           </div>
         ) : null}
-
         {foreverModal && !expanded ? (
           <div className="forever-modal-content">
             <h3>I’m an image title</h3>
@@ -80,11 +85,11 @@ const Modal = ({
       <div className="modalbutton">
         {!expanded && (
           <button>
-            <GrExpand onClick={toggleFullScreen} />
+            <BsArrowsAngleExpand onClick={toggleFullScreen} />
           </button>
         )}
         <button onClick={onClose}>
-          <IoCloseOutline />
+          <RxCross1 />
         </button>
       </div>
     </div>

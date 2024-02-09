@@ -1,6 +1,6 @@
 .contact-section {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   margin-top: 100px;
   background-color: black;
@@ -11,7 +11,6 @@
 
 .left-box {
   height: 600px;
-  width: 400px;
   background-color: red;
   display: flex;
   align-items: center;
@@ -29,17 +28,11 @@
 }
 
 .name {
-  /*display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    box-sizing: border-box;
-    gap: 1rem;*/
   display: flex;
   justify-content: space-between;
   width: 100%;
   gap: 50px;
-  label {
+  & label {
     display: block;
     margin-bottom: 5px;
     color: white;
@@ -71,8 +64,9 @@
   height: 600px;
   width: 100%;
   padding-inline: 80px;
+  color: red;
   flex: 1;
-  padding-top: 100px;
+  padding-top: 50px;
   box-sizing: border-box;
   justify-content: center;
   background-color: #161515;
@@ -97,7 +91,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  input {
+  & input {
     background-color: #161515;
     color: white;
     border-bottom: 1px solid white;
@@ -106,7 +100,7 @@ form {
     border: none;
     box-sizing: border-box;
   }
-  label {
+  & label {
     color: white;
     width: 100%;
     height: 1.4em;
@@ -121,24 +115,15 @@ form {
   @media screen and (max-width: 450px) {
   }
 }
-.firstnamee {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.lastnamee {
+.firstnamee,
+.lastnamee,
+.form-line {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .form-line {
-  /* margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid white;
-    box-sizing: border-box;*/
-
   padding-top: 50px;
   flex-direction: column;
   width: 100%;
@@ -147,7 +132,7 @@ form {
     justify-content: center;
     align-items: center;
   }
-  label {
+  & label {
     display: block;
     margin-bottom: 35px;
     color: white;
@@ -161,7 +146,7 @@ form {
   .label-form-line {
     margin-bottom: 60px;
   }
-  input {
+  & input {
     flex: 1;
     padding: 0;
     border: none;
@@ -170,10 +155,11 @@ form {
     border-bottom: 1px solid white;
     outline: none;
     font-size: 14px;
+    &:hover {
+      border-bottom: 1px solid red;
+    }
   }
-  input:hover {
-    border-bottom: 1px solid red;
-  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
