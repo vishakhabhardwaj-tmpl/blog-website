@@ -34,6 +34,7 @@
   font-size: 51px;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-content: center;
   font-weight: 1500;
   font-family: "46px poppins-semibold,poppins", sans-serif;
@@ -47,11 +48,11 @@
   justify-content: center;
   background-color: #161515;
   @media (width<=768px) {
-    padding-inline: 0;
+    padding-inline: 100px;
     padding-top: 36px;
   }
   @media screen and (max-width: 450px) {
-    padding-inline: 5px;
+    padding-inline: 50px;
     padding-top: 12px;
   }
 
@@ -96,7 +97,7 @@
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 100%;
     overflow-x: hidden;
   }
 }
@@ -142,7 +143,7 @@
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 100%;
     overflow-x: hidden;
   }
 }
