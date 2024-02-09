@@ -15,7 +15,7 @@ const Card = ({ title, imageurl, shortdescription, Date, id, readTime }) => {
           <div className="card-date">
             {formattedDate} . {readTime}
           </div>
-          <div className="card-title">{title}</div>
+          <h2 className="card-title">{title}</h2>
           <div className="card-body">
             <p>{shortdescription}</p>
           </div>

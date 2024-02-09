@@ -5,13 +5,10 @@
   color: white;
   padding: 0px;
 
-  h1 {
+  & h1 {
     margin-bottom: 50px;
-    @media only screen and (min-width: 968px) {
-      font-size: 150px;
-    }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media screen and (min-width: 768px) {
       font-size: 150px;
     }
 
@@ -27,46 +24,15 @@
     justify-content: flex-start;
   }
 }
-/* .card-section {
-  display: flex;
-  justify-content: space-around;
-  /* justify-content: space-between; */
 
-/*flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-  padding-top: 30px;
-} */
-
-/* .mobile-card-section {
-  @media screen and (max-width: 450px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    img {
-      width: 100px;
-      height: 100px;
-    }
-    .row-wise {
-      display: flex;
-    }
-    .column-wise {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-} */
-
-/* Mobile-specific styles using media query */
 @media only screen and (max-width: 767px) {
   .card-section {
-    display: none; /* Hide the default card section on mobile */
+    display: none;
   }
 
   .mobile-review-section {
     display: flex;
     flex-direction: column;
-    /* Add your styles for the mobile review section here */
   }
 }
 

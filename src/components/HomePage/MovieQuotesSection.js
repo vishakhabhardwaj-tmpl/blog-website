@@ -21,7 +21,7 @@ const MovieQuotesSection = () => {
   const quotes = [
     { text: '"Why cant you tell me  what you want?"', movie: "Bermuda Times" },
     {
-      text: '"Look me in the eyes and count till ten ,hi all how are you doing great everything will be good and great"',
+      text: '"Look me in the eyes and count till ten "',
       movie: "Being Unfaithful",
     },
     { text: '"You know it when you see it"', movie: "The Funny Lady" },

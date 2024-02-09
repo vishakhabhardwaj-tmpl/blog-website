@@ -6,29 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./ForeverMoviesSection.css";
 import Modal from "../Modal";
 
-// const CustomPrevArrow = ({ onClick }) => (
-//   <div className="custom-prev2" onClick={onClick}>
-//     &#8249;
-//   </div>
-// );
-
-// const CustomNextArrow = ({ onClick }) => (
-//   <div className="custom-next2" onClick={onClick}>
-//     &#8250;
-//   </div>
-// );
-
-// const SlickPrevArrow = ({ onClick }) => (
-//   <div className="slick-arrow slick-prev" onClick={onClick}>
-//     &#8249;
-//   </div>
-// );
-// const SlickNextArrow = ({ onClick }) => (
-//   <div className="slick-arrow slick-next" onClick={onClick}>
-//     &#8250;
-//   </div>
-// );
-
 const ForeverMoviesSection = () => {
   const movies = [
     {
@@ -63,12 +40,21 @@ const ForeverMoviesSection = () => {
     },
   ];
 
+  const [movie, setMovie] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [currentslide, setCurrentslide] = useState(0);
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 4.3, // Adjust as needed
+    slidesToShow: 4.3,
     slidesToScroll: 1,
+    afterChange: (current) => {
+      setCurrentslide(current);
+    },
     centerMode: false,
     responsive: [
       {
@@ -90,15 +76,12 @@ const ForeverMoviesSection = () => {
         },
       },
     ],
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-  };
-  const [movie, setMovie] = useState([]);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [expanded, setExpanded] = useState(false);
 
+    prevArrow: currentslide !== 0 ? <CustomPrevArrow /> : null,
+    nextArrow: currentslide < 1.7000000000000002 ? <CustomNextArrow /> : null,
+  };
+
+  console.log(currentslide, "current");
   const getmovie = async () => {
     setLoading(true);
     const url = "https://onmyscreen-backend.onrender.com/blogs";

@@ -123,20 +123,6 @@ const Reviews = () => {
             );
           })}
         </div>
-        {/* <div className="mobile-card-section">
-          {blog?.map((blogData) => {
-            return (
-              <div className="row-wise">
-                Card key={blogData.id}
-                <div className="column-wise">
-                  title={blogData.title}
-                  Date={blogData.createdAt}
-                </div>
-                imageurl={blogData.bannerImgLink}
-              </div>
-            );
-          })}
-        </div> */}
         <MobileReviewSection blog={blog} />
       </div>
     </div>
