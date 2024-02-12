@@ -29,7 +29,7 @@ const Modal = ({
   };
 
   return (
-    <div className="Popup ${expanded ? 'expanded' : ''}" ref={modalRef}>
+    <div className={`Popup ${expanded ? "expanded" : ""}`} ref={modalRef}>
       <div className="image-button-section">
         <div className="mobile-modal-view">
           {ratingModal && (

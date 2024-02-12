@@ -29,6 +29,7 @@ hr {
 .movies-container {
   position: relative;
   display: flex;
+  cursor: pointer;
   height: 500px;
   /* place-content: flex-start;
   direction: ltr;

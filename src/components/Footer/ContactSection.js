@@ -80,7 +80,7 @@ const ContactSection = () => {
         </p>
       </div>
       <div className="right-form">
-        <form onSubmit={handlesubmit}>
+        <form className="contacts" onSubmit={handlesubmit}>
           <div className="form-line">
             <div className="name">
               <div className="firstnamee">

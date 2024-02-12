@@ -7,7 +7,6 @@
   margin-top: 60px;
   font-weight: 10;
   padding-bottom: 30px;
-  /* margin-left: 4rem; */
   height: max-content;
   @media screen and (max-width: 768px) {
     width: 85%;
@@ -21,41 +20,44 @@
   font-style: normal;
   justify-content: flex-start;
 
-  hr {
+  & hr {
     width: 100%;
     background-color: 0.5px light white;
     display: flex;
+    height: 0.1em;
+    background: linear-gradient(to right, #efeaea, #fafaff);
   }
-  h2 {
+  & h2 {
     display: flex;
     gap: 1rem;
     margin-bottom: 0px;
   }
-  p {
+  & p {
     font-size: 14px;
     line-height: 1.5em;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 40px;
+    font-weight: 100;
     font-family: avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light,
       sans-serif;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 7;
-    line-clamp: 7;
   }
-  button {
+  & button {
     border: 1px solid white;
     padding: 10px 20px;
+    cursor: pointer;
   }
 }
 
 .about-me button {
   background-color: #161516;
   color: white;
-  padding: 10px 15px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  padding: 11px 30px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 15px;
 
   &:hover {
     background-color: red;
@@ -69,41 +71,41 @@
 .imageauthor > img {
   width: 100%;
   height: 100%;
-  /* width: 400px;
-  height: 400px; */
   object-fit: cover;
 }
 .postarchieve {
   background-color: #161516;
 
-  button {
+  & button {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: white;
     color: black;
     padding: 10px 12px;
     font-weight: lighter;
+    cursor: pointer;
   }
 
-  h2 {
+  & h2 {
     margin-bottom: 0px;
   }
 }
 .tags {
   background-color: #161516;
-  h2 {
+  & h2 {
     margin-bottom: 0px;
   }
 
-  hr {
-    font-weight: lighter;
+  & hr {
+    border: 1px solid white;
   }
-  button {
+  & button {
     background-color: white;
     border: 1px solid black;
     color: black;
     font-weight: lighter;
     padding: 10px 15px;
+    cursor: pointer;
 
     &:hover {
       background-color: red;
@@ -119,4 +121,5 @@
   padding: 10px 0px;
   display: flex;
   gap: 5px;
+  cursor: pointer;
 }
