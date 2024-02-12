@@ -13,7 +13,7 @@
 }
 
 .recentImage {
-  img {
+  & img {
     width: 100%;
   }
   border: none;
