@@ -61,6 +61,7 @@
 
   &:hover {
     background-color: red;
+    border: none;
   }
 }
 .imageauthor {
@@ -77,13 +78,21 @@
   background-color: #161516;
 
   & button {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    /* margin-top: 10px; */
+    margin-bottom: 40px;
+    font-size: 15px;
+    width: 100%;
     background-color: white;
     color: black;
-    padding: 10px 12px;
+    padding: 14px 12px;
     font-weight: lighter;
     cursor: pointer;
+    text-align: start;
+    border: none;
+    &:hover {
+      color: white;
+      background-color: red;
+    }
   }
 
   & h2 {
@@ -93,6 +102,7 @@
 .tags {
   background-color: #161516;
   & h2 {
+    margin-top: 40px;
     margin-bottom: 0px;
   }
 
@@ -104,13 +114,13 @@
     border: 1px solid black;
     color: black;
     font-weight: lighter;
-    padding: 10px 15px;
+    padding: 7px 15px;
     cursor: pointer;
 
     &:hover {
       background-color: red;
       color: white;
-      border: 1px solid white;
+      /* border: 1px solid white; */
     }
   }
 }

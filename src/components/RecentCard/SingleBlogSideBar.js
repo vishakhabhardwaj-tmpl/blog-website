@@ -23,7 +23,7 @@ const SingleBlogSideBar = ({ detailedDescription, profileImageLink }) => {
         <hr />
         <div className="postbutton">
           <Link to="/blog/:blogId">
-            <button>March(2023) 9</button>
+            <button>March 2023(9)</button>
           </Link>
           <hr />
         </div>
