@@ -14,6 +14,7 @@
   }
   @media screen and (max-width: 800px) {
     padding-bottom: 20px;
+    position: static;
   }
 }
 
@@ -261,7 +262,6 @@ a {
   .menu-icon {
     display: block;
     margin-left: auto;
-    z-index: 100;
     color: white;
   }
 
@@ -316,13 +316,14 @@ a {
 .hamburgermenu {
   background-color: #161516;
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   height: 100vh;
-  top: 0;
-  width: 400px;
+
+  top: 135px;
+  width: 100%;
   /* left: 113px; */
   @media (max-width: 450px) {
-    left: 113px;
+    /* left: 113px; */
   }
 
   @media (min-width: 451px) and (max-width: 768px) {

@@ -36,6 +36,11 @@ function Navbar() {
     getresult();
   }, [suggestions]);
 
+  useEffect(() => {
+    if (isMenuOpen) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
+  }, [isMenuOpen]);
+
   console.log(suggestions, searchData);
 
   return (
@@ -84,13 +89,13 @@ function Navbar() {
         <div className="nav-icons">
           {" "}
           {isMenuOpen ? (
-            <button className="menu-icon" onClick={toggleMenu}>
+            <span className="menu-icon" onClick={toggleMenu}>
               <FaTimes />
-            </button>
+            </span>
           ) : (
-            <button className="menu-icon" onClick={toggleMenu}>
+            <span className="menu-icon" onClick={toggleMenu}>
               <FaBars />
-            </button>
+            </span>
           )}
           <ul className="nav-links">
             <li>
