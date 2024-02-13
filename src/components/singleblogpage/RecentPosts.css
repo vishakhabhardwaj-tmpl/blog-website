@@ -1,15 +1,15 @@
 .FirstLane {
   color: white;
   display: flex;
-  /* gap: 20rem; */
   justify-content: space-between;
   font-size: 20px;
-  /* padding-left: 100px; */
   margin-top: 30px;
   & p {
     font-family: avenir-lt-w01_35-light1475496;
   }
-
+  @media screen and (max-width: 550px) {
+    padding-inline: 35px;
+  }
   @media (min-width: 768px) and (max-width: 1210px) {
     display: flex;
     font-size: 16px;
@@ -22,7 +22,6 @@
 .recentcard-section {
   display: flex;
   margin-top: 30px;
-  /* padding-left: 100px; */
 }
 .see-all button {
   color: white;
@@ -34,9 +33,17 @@
   display: none;
 }
 .slick-arrow slick-prev1,
-.slick-arrow slick-next1 {
+.slick-arrow slick-next1,
+.slick-track::after,
+.slick-track::before {
   display: none;
 }
+
+.slick-track {
+  display: flex;
+  gap: 20px;
+}
+
 .slick-prev1:before,
 .slick-next1:before {
   display: none;
@@ -54,4 +61,10 @@
   background: none;
   border: none;
   outline: none;
+}
+
+@media screen and (max-width: 550px) {
+  .slick-slider {
+    padding-inline: 10px;
+  }
 }

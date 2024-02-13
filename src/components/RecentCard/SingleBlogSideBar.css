@@ -54,7 +54,6 @@
   border: 1px solid white;
   margin: 0px;
   cursor: pointer;
-  margin-block: 1.5rem;
 
   &:hover {
     background-color: red;

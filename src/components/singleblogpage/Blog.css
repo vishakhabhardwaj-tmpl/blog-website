@@ -11,6 +11,12 @@
   }
 }
 
+.paddingInline {
+  @media screen and (max-width: 550px) {
+    padding-inline: 35px;
+  }
+}
+
 .blog-meta {
   font-size: 14px;
   color: white;
@@ -37,12 +43,18 @@
 }
 
 .blog-image {
-  margin-top: 5px;
-  margin-bottom: 20px;
+  height: 500px;
+  margin-inline: auto;
+
+  @media screen and (max-width: 550px) {
+    height: 300px;
+    width: 90%;
+  }
 
   & img {
-    height: 500px;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -75,7 +87,11 @@
 .horizontal-line {
   height: 0.5px;
   background-color: rgb(63, 58, 58);
-  margin: 20px 0;
+  margin-block: 20px;
+
+  @media screen and (max-width: 550px) {
+    margin-inline: 40px;
+  }
 }
 
 .social-icons {
