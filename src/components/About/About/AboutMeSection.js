@@ -32,7 +32,7 @@ const AboutMeSection = () => {
         <div className="author-description">
           <h3>{aboutData?.name}</h3>
           <div className="aboutdescription">
-            <h2>{aboutData?.shortDescription}</h2>
+            <h2 className="jane-description">{aboutData?.shortDescription}</h2>
             <p className="author-description-first-p">
               {" "}
               {aboutData?.detailedDescription}
@@ -43,7 +43,7 @@ const AboutMeSection = () => {
             </p>
           </div>
           <button onClick={redirectToHomepage} className="blog-button">
-            MY BLOG
+            My Blog
           </button>
         </div>
       </div>

@@ -53,8 +53,10 @@ const RecentPosts = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          dots: true,
-          // centerMode: true,
+          // dots: true,
+          centerMode: true,
+          infinite: true,
+          centerPadding: "60px",
         },
       },
       {
