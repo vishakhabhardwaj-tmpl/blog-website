@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./SingleBlogSideBar.css";
 
 const SingleBlogSideBar = ({ detailedDescription, profileImageLink }) => {
-  console.log(profileImageLink);
   return (
     <div className="singlesidebar">
       <div className="about-me">

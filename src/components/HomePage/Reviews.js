@@ -95,13 +95,11 @@ const Reviews = () => {
     const data = await response.json();
 
     setBlog(data?.blogs);
-    console.log(blog, data);
   };
 
   useEffect(() => {
     getData();
   }, []);
-  console.log(blog, "blog");
   return (
     <div>
       <div className="start">

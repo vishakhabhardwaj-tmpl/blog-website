@@ -80,7 +80,6 @@ const RatingSection = () => {
     prevArrow: currentslide !== 0 ? <CustomPrevArrow /> : null,
     nextArrow: currentslide <= 3 ? <CustomNextArrow /> : null,
   };
-  console.log(currentslide);
   const getrating = async () => {
     setLoading(true);
     const url = "https://onmyscreen-backend.onrender.com/blogs";
@@ -88,7 +87,6 @@ const RatingSection = () => {
     const data = await response.json();
     if (data) {
       setRating(data?.ratingsData);
-      console.log(rating, data);
       setLoading(false);
     }
   };
