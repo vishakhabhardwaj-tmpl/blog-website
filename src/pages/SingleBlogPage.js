@@ -31,6 +31,7 @@ const SingleBlogPage = () => {
           imageUrl={singlepage?.bannerImgLink}
           heading={singlepage?.title}
           Date={singlepage?.createdAt}
+          shortDescription={singlepage?.shortDescription}
           description={singlepage?.fullDescription}
           description1={singlepage?.fullDescription1}
           description2={singlepage?.fullDescription2}
