@@ -16,7 +16,6 @@ const Modal = ({
   expanded,
   expandedmodal,
 }) => {
-  console.log(expanded, "expandedexpanded");
   const modalRef = useRef(null);
 
   const toggleFullScreen = () => {

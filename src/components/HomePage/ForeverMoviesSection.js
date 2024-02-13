@@ -81,7 +81,6 @@ const ForeverMoviesSection = () => {
     nextArrow: currentslide < 1.7000000000000002 ? <CustomNextArrow /> : null,
   };
 
-  console.log(currentslide, "current");
   const getmovie = async () => {
     setLoading(true);
     const url = "https://onmyscreen-backend.onrender.com/blogs";
@@ -90,7 +89,6 @@ const ForeverMoviesSection = () => {
 
     if (data) {
       setMovie(data?.favMovieData);
-      console.log(movie, data);
       setLoading(false);
     }
   };

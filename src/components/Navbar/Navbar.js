@@ -4,12 +4,16 @@ import { CiSearch } from "react-icons/ci";
 import "../Navbar/navbar.css";
 import { NavLink } from "react-router-dom";
 
-import { Link, useParams } from "react-router-dom";
+import {
+  Link,
+  //  useParams,
+  useLocation,
+} from "react-router-dom";
 import logoImage from "../../image/image.png";
 
 function Navbar() {
-  const pathname = useParams();
-  console.log(pathname);
+  // const pathname = useParams();
+  const location = useLocation();
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -25,11 +29,9 @@ function Navbar() {
   const getresult = async () => {
     const url =
       "https://onmyscreen-backend.onrender.com/blogs/search?q=" + suggestions;
-    console.log(url, "link");
     const response = await fetch(url);
     const data = await response.json();
     setSearchData(data);
-    console.log(data);
   };
 
   useEffect(() => {
@@ -37,11 +39,13 @@ function Navbar() {
   }, [suggestions]);
 
   useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
     if (isMenuOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "unset";
   }, [isMenuOpen]);
-
-  console.log(suggestions, searchData);
 
   return (
     <>

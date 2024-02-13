@@ -15,7 +15,6 @@ const AboutMeSection = () => {
     const about = await fetch(url);
     const data = await about.json();
     setAboutData(data);
-    console.log(aboutData, data);
   };
   useEffect(() => {
     getabout();

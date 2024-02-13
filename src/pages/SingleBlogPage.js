@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 const SingleBlogPage = () => {
   const id = useParams();
   const blogId = id?.blogId;
-  console.log(blogId);
   const [singlepage, setSinglepage] = useState({});
   const getData = async () => {
     const url = `https://onmyscreen-backend.onrender.com/blogs/getOne/${blogId}`;
@@ -16,13 +15,11 @@ const SingleBlogPage = () => {
     const data = await response.json();
 
     setSinglepage(data);
-    console.log(singlepage, data);
   };
 
   useEffect(() => {
     getData();
   }, [id]);
-  console.log(singlepage, "data");
   return (
     <div className="blogpagemain">
       <div className="fullblog">
