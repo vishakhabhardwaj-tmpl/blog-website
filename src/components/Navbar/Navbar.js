@@ -1,36 +1,3 @@
-/*import{ useRef, useState } from "react";
-import '../Navbar/navbar.css'
-
-
-
-
-
-function Navbar(){
-    return (
-    <nav className="nav">
-      <div className="logo">
-      <h2>ONMYSCREEN</h2>  
-      </div>
-      <div className="search">
-        <input class="search-input" type="search" placeholder="search..."/>
-        <span class="search-icon material-symbols-outlined">
-              search
-        </span>
-         </div>
-            <div className="nav-icons">
-            <ul> 
-            <li><a href="/">MyBlog</a></li>
-            <li><a href="/About">About</a></li>
-            <li><a href="/Contact">Contact</a></li>
-            </ul>
-            </div>
-  
-      </nav>
-    
-  
-    );
-}
-export default Navbar; */
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";

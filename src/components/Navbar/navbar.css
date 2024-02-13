@@ -12,6 +12,9 @@
   @media screen and (max-width: 450px) {
     padding-inline: 10px;
   }
+  @media screen and (max-width: 800px) {
+    padding-bottom: 20px;
+  }
 }
 
 .logo img {
@@ -151,7 +154,7 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .search {
     width: 100%;
     margin-top: 10px;
@@ -163,6 +166,7 @@ a {
     }
     .mobile-search-input {
       width: 100%;
+      padding-block: 10px;
       & input {
         width: 100%;
       }
@@ -272,6 +276,8 @@ a {
   .mobilesearch {
     display: flex;
     padding: 2px;
+    padding-bottom: 70px;
+    position: relative;
     & input {
       width: 100%;
       background-color: black;
@@ -362,10 +368,10 @@ a {
 
 .suggestionbordermobile {
   position: absolute;
-  z-index: 101100000;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  top: 148px;
+  top: 34px;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
