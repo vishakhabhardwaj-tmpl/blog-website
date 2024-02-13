@@ -20,17 +20,14 @@ const SingleBlogSideBar = ({ detailedDescription, profileImageLink }) => {
       </div>
       <div className="postarchieve">
         <h2>PostsArchive</h2>
-        <hr />
         <div className="postbutton">
           <Link to="/blog/:blogId">
             <button>March 2023(9)</button>
           </Link>
-          <hr />
         </div>
       </div>
       <div className="tags">
         <h2>Tags</h2>
-        <hr />
         <div className="tagbuttons">
           <Link to="/">
             <button>Movie</button>

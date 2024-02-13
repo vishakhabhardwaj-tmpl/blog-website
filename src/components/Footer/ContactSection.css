@@ -73,14 +73,12 @@
     sans-serif;
 
   @media (width<=768px) {
+    height: auto;
     padding-inline: 0;
-    padding-top: 36px;
+    padding-block: 35px;
   }
   @media screen and (max-width: 450px) {
-    height: 600px;
     padding-inline: 5px;
-    padding-top: 0px;
-    padding-bottom: 20px;
   }
 }
 
@@ -112,8 +110,6 @@
     flex-direction: column;
     padding: 0px;
   }
-  @media screen and (max-width: 450px) {
-  }
 }
 .firstnamee,
 .lastnamee,
@@ -124,7 +120,6 @@
 }
 
 .form-line {
-  /* padding-top: 50px; */
   flex-direction: column;
   width: 100%;
 
@@ -164,7 +159,6 @@
     display: flex;
     flex-direction: column;
     width: 65%;
-    overflow-x: hidden;
   }
 }
 
@@ -175,12 +169,12 @@
 }
 
 .form-line.input-line input {
-  width: 100%; /* Updated to full width for mobile */
+  width: 100%;
   margin-bottom: 10px;
 }
 
 .form-line text {
-  width: 100%; /* Updated to full width for mobile */
+  width: 100%;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -203,7 +197,6 @@
     padding-right: 90px;
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-top: 20px;
   }
   @media screen and (max-width: 768px) {
     align-items: center;
@@ -254,7 +247,6 @@
   border-color: white;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
@@ -264,9 +256,5 @@
   .left-box {
     margin-left: 0;
     margin-bottom: 20px;
-  }
-
-  .right-form {
-    padding-top: 20px;
   }
 }

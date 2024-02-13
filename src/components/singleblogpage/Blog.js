@@ -32,13 +32,13 @@ const Blog = ({
       </div>
       <div className="blog-content">
         <h2>{heading}</h2>
-        <p>{shortDescription}</p>
+        <p className="shortDescription">{shortDescription}</p>
         <div className="blog-image">
           <img src={imageUrl} alt={heading} />
         </div>
-        <p>
-          {description} {description1} {description2}
-        </p>
+        <p className="description-below-image">{description}</p>
+        <p className="description-below-image">{description1}</p>
+        <p className="description-below-image">{description2}</p>
         <div className="button-container">
           <Link to="/">
             <button>Review</button>
