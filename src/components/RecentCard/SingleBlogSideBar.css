@@ -3,6 +3,7 @@
   color: white;
   padding: 30px;
   height: max-content;
+  width: 70%;
   @media screen and (max-width: 768px) {
     width: 85%;
   }

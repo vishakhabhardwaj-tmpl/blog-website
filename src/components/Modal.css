@@ -127,6 +127,7 @@ button:last-child {
   height: 528px;
   width: 758px;
   margin-right: 50px;
+  margin-left: 50px;
   @media screen and (max-width: 450px) {
     height: 566px;
     width: 320px;

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./ContactSection.css";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactSection = () => {
   const [firstname, setFirstname] = useState("");
@@ -56,12 +59,25 @@ const ContactSection = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(postform),
     });
+    const notify = () =>
+      toast.success("Thanks for feedback!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+      });
 
     if (savedata.status === 200) {
       setFirstname("");
       setLastname("");
       setEmail("");
       setMessage("");
+      notify();
     }
 
     setFirstnameError("");
@@ -84,7 +100,9 @@ const ContactSection = () => {
           <div className="form-line">
             <div className="name">
               <div className="firstnamee">
-                <label htmlFor="firstName">First Name:</label>
+                <label htmlFor="firstName">
+                  First Name<span className="required">*</span>:
+                </label>
                 <input
                   type="text"
                   value={firstname}
@@ -93,12 +111,17 @@ const ContactSection = () => {
                     setFirstnameError("");
                   }}
                 />
+              </div>
+              <div>
                 {firstnameError && (
                   <span className="error-message">{firstnameError}</span>
                 )}
               </div>
+
               <div className="lastnamee">
-                <label htmlFor="lastName">Last Name:</label>
+                <label htmlFor="lastName">
+                  Last Name<span className="required">*</span>:
+                </label>
                 <input
                   type="text"
                   value={lastname}
@@ -107,10 +130,10 @@ const ContactSection = () => {
                     setLastnameError("");
                   }}
                 />
-                {lastnameError && (
-                  <span className="error-message">{lastnameError}</span>
-                )}
               </div>
+              {lastnameError && (
+                <span className="error-message">{lastnameError}</span>
+              )}
             </div>
           </div>
           <div className="form-line">
@@ -126,8 +149,9 @@ const ContactSection = () => {
                 setEmailError("");
               }}
             />
-            {emailError && <span className="error-message">{emailError}</span>}
           </div>
+          {emailError && <span className="error-message">{emailError}</span>}
+
           <div className="form-line">
             <label className="label-form-line" htmlFor="Message">
               Leave us a message:
@@ -140,6 +164,7 @@ const ContactSection = () => {
           </div>
           <div className="form-line submit-line">
             <button type="submit">Submit</button>
+            <ToastContainer />
           </div>
         </form>
       </div>

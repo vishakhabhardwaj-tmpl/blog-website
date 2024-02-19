@@ -2,6 +2,7 @@
   width: 100%;
   height: 850px;
   color: white;
+
   @media screen and (max-width: 450px) {
     width: 100%;
     height: 100%;
@@ -27,18 +28,21 @@
 hr {
   border: 1px light #ccc;
   margin-bottom: 30px !important;
+  @media screen and (max-width: 450px) {
+    margin: 20px 20px;
+  }
 }
 
 .imagees-container {
   position: relative;
-  display: flex;
-  place-content: flex-start;
-  /* direction: ltr; */
+  display: flex !important;
+  place-content: center !important;
   cursor: pointer;
   height: 650px;
   box-sizing: border-box;
   @media screen and (max-width: 450px) {
     height: 100%;
+    width: 100%;
   }
 }
 .imagees-container > img {
