@@ -7,7 +7,7 @@
   padding-block: 30px 70px;
   font-size: 14px;
   position: sticky;
-  top: 0;
+  /* top: 0; */
   z-index: 3;
   @media screen and (max-width: 450px) {
     padding-inline: 10px;
@@ -263,6 +263,7 @@ a {
     display: block;
     margin-left: auto;
     color: white;
+    font-size: 20px;
   }
 
   .nav-icons {
@@ -275,27 +276,44 @@ a {
   }
   .mobilesearch {
     display: flex;
-    padding: 2px;
-    padding-bottom: 70px;
+    padding-bottom: 35px;
     position: relative;
+    align-items: center;
+    background-color: #000000;
+
     & input {
-      width: 100%;
-      background-color: black;
+      padding-block: 15px;
+      padding-inline: 10px;
       color: white;
+      border: none;
+      background-color: black;
       outline: none;
       border: none;
-      font-size: 20px;
-      border: 1px solid black;
+      font-size: 20px !important;
+      width: 100%;
       &::placeholder {
         color: white;
+        font-weight: bold;
+      }
+
+      &:focus {
+        border: 1px solid white;
+      }
+      &:hover {
+        border: 1px solid white;
       }
     }
   }
 
   .mobile-search {
     color: white;
-
-    padding-right: 7px;
+    position: absolute;
+    right: 5px;
+    font-size: 1.4em;
+    cursor: pointer;
+    font-weight: 100;
+    opacity: 1;
+    padding-right: 5px;
   }
   .nav-links {
     display: none;
@@ -319,12 +337,9 @@ a {
   z-index: 3;
   height: 100vh;
 
-  top: 135px;
+  top: 2px;
   width: 100%;
-  /* left: 113px; */
-  @media (max-width: 450px) {
-    /* left: 113px; */
-  }
+  left: 113px;
 
   @media (min-width: 451px) and (max-width: 768px) {
     width: 567px;
@@ -363,7 +378,8 @@ a {
 
 @media screen and (max-width: 450px) {
   .mobilesearch {
-    padding-inline: 10px;
+    padding-inline: 0;
+    margin-inline: 10px;
   }
 }
 
@@ -372,28 +388,15 @@ a {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  top: 34px;
+  top: 42px;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
 
   background-color: black;
   overflow-y: auto;
-  /* width: 600px; */
-  @media (width: 768px) {
-    width: 675px;
-  }
-  @media (width<=380px) {
-    width: 200px;
-  }
-  @media (width<= 480px) {
-    width: 400px;
-  }
-  @media (width<=380px) {
-    width: 260px;
-  }
-
-  /* flex-direction: row !important; */
+  width: 100%;
+  /* padding-inline: 10px; */
   & h4 {
     color: white;
   }
@@ -415,11 +418,8 @@ a {
   display: flex;
   gap: 10px;
   font-size: 12px;
-  /* width: 100%; */
-  /* max-width: 241px; */
   height: auto;
   color: white;
-  /* word-wrap: break-word; */
   margin-bottom: 10px;
 }
 .suggestion-info-mobile {
@@ -437,8 +437,6 @@ a {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  /* text-overflow: ellipsis; */
-  width: 460px;
   @media (width<=480px) {
     width: 200px;
     text-overflow: ellipsis;
@@ -454,7 +452,6 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 460px;
 
   @media (width<=480px) {
     width: 200px;

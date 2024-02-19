@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./SectionWithForm.css";
+import { ToastContainer, toast } from "react-toastify";
 
+import "react-toastify/dist/ReactToastify.css";
 const SectionWithForm = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -62,10 +64,24 @@ const SectionWithForm = () => {
       body: JSON.stringify(postform),
     });
 
+    const notify = () =>
+      toast.success("Thanks for subscribing!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+      });
+
     if (savedata.status === 200) {
       setFirstname("");
       setLastname("");
       setEmail("");
+      notify();
     }
 
     setFirstnameError("");

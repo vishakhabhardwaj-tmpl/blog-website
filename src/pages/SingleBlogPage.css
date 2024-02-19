@@ -3,8 +3,8 @@
   font-style: normal;
   font-size: 15px;
   font-weight: lighter;
-  width: 60%;
-  gap: 50px;
+  width: 70%;
+  gap: 70px;
   margin-inline: auto;
 
   @media screen and (max-width: 900px) {

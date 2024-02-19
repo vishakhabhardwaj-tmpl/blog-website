@@ -5,7 +5,8 @@
   font-size: 20px;
   margin-top: 30px;
   & p {
-    font-family: avenir-lt-w01_35-light1475496;
+    /* font-family: avenir-lt-w01_35-light1475496; */
+    font-weight: 100 !important;
   }
   @media screen and (max-width: 550px) {
     padding-inline: 35px;
@@ -22,11 +23,15 @@
 .recentcard-section {
   display: flex;
   margin-top: 30px;
+  /* font-family: avenir-lt-w01_35-light1475496; */
 }
 .see-all button {
   color: white;
   border: none;
   background: black;
+  cursor: pointer;
+  /* font-family: avenir-lt-w01_35-light1475496;*/
+  font-size: 20px;
 }
 .slick-prev1,
 .slick-next1 {

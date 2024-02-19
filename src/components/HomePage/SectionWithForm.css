@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   width: 100%;
-  gap: 1rem;
+  gap: 1.8rem;
   color: red;
-  margin-top: 80px;
+  margin-top: 30px;
   font-family: light1475496, avenir-lt-w05_35-light, sans-serif;
   @media screen and (max-width: 768px) {
     display: flex;
@@ -58,6 +58,7 @@
   }
   @media screen and (max-width: 450px) {
     padding-inline: 50px;
+    gap: 30px;
   }
 
   input:hover {
