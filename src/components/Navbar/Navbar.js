@@ -42,10 +42,10 @@ function Navbar() {
     setMenuOpen(false);
   }, [location.pathname]);
 
-  useEffect(() => {
-    if (isMenuOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "unset";
-  }, [isMenuOpen]);
+  // useEffect(() => {
+  //   if (isMenuOpen) document.body.style.overflow = "hidden";
+  //   else document.body.style.overflow = "unset";
+  // }, [isMenuOpen]);
 
   return (
     <>
@@ -90,7 +90,7 @@ function Navbar() {
             </div>
           ) : null}
         </div>
-        <div className="nav-icons">
+        <div className={`nav-icons ${isMenuOpen ? "fixed-menu" : ""}`}>
           {" "}
           {isMenuOpen ? (
             <span className="menu-icon" onClick={toggleMenu}>
@@ -113,9 +113,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Contact" activeClassName="active">
-                Contact
-              </NavLink>
+              <a href="#contact-us">Contact</a>
             </li>
           </ul>
         </div>
@@ -173,9 +171,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Contact" activeClassName="active">
-                Contact
-              </NavLink>
+              <a href="#contact-us">Contact</a>
             </li>
           </ul>
         </div>

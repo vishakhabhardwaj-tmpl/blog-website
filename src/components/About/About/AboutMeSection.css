@@ -1,5 +1,6 @@
 .about-me-section {
   text-align: center;
+  margin-bottom: 70px;
   & h2 {
     text-align: start;
     font-size: 30px;
