@@ -32,61 +32,71 @@ const ContactSection = () => {
   const handlesubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateFirstName(firstname)) {
-      setFirstnameError("Please enter a valid first name");
-      return;
-    }
+    const formData = { firstname, lastname, email, reviews: message };
 
-    if (!validateLastName(lastname)) {
-      setLastnameError("Please enter a valid last name");
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address");
-      return;
-    }
-
-    const postform = {
-      firstName: firstname,
-      lastName: lastname,
-      email: email,
-      reviews: message,
+    const validateAndSetError = (field, validator, setError) => {
+      if (!validator(formData[field])) {
+        setError(`Please enter a valid ${field}`);
+        return false;
+      }
+      return true;
     };
-    const url = "https://onmyscreen-backend.onrender.com/blogs/feedback/";
-    const savedata = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(postform),
-    });
-    const notify = () =>
-      toast.success("Thanks for feedback!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        // transition: Bounce,
-      });
 
-    if (savedata.status === 200) {
-      setFirstname("");
-      setLastname("");
-      setEmail("");
-      setMessage("");
-      notify();
+    const isValidFirstName = validateAndSetError(
+      "firstName",
+      validateFirstName,
+      setFirstnameError
+    );
+    const isValidLastName = validateAndSetError(
+      "lastName",
+      validateLastName,
+      setLastnameError
+    );
+    const isValidEmail = validateAndSetError(
+      "email",
+      validateEmail,
+      setEmailError
+    );
+
+    if (isValidFirstName && isValidLastName && isValidEmail) {
+      try {
+        const url = "https://onmyscreen-backend.onrender.com/blogs/feedback/";
+        const response = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.status === 200) {
+          setFirstname("");
+          setLastname("");
+          setEmail("");
+          setMessage("");
+          toast.success("Thanks for feedback!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else {
+          // Handle server error
+          toast.error("Failed to submit feedback. Please try again later.");
+        }
+      } catch (error) {
+        // Handle network error
+        toast.error(
+          "Failed to submit feedback. Please check your internet connection."
+        );
+      }
     }
-
-    setFirstnameError("");
-    setLastnameError("");
-    setEmailError("");
   };
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact-us">
       <div className="left-box">
         <p className="box-text">
           HAVE I MISSED
@@ -111,8 +121,6 @@ const ContactSection = () => {
                     setFirstnameError("");
                   }}
                 />
-              </div>
-              <div>
                 {firstnameError && (
                   <span className="error-message">{firstnameError}</span>
                 )}
@@ -130,10 +138,10 @@ const ContactSection = () => {
                     setLastnameError("");
                   }}
                 />
+                {lastnameError && (
+                  <span className="error-message">{lastnameError}</span>
+                )}
               </div>
-              {lastnameError && (
-                <span className="error-message">{lastnameError}</span>
-              )}
             </div>
           </div>
           <div className="form-line">
@@ -149,8 +157,8 @@ const ContactSection = () => {
                 setEmailError("");
               }}
             />
+            {emailError && <span className="error-message">{emailError}</span>}
           </div>
-          {emailError && <span className="error-message">{emailError}</span>}
 
           <div className="form-line">
             <label className="label-form-line" htmlFor="Message">

@@ -67,7 +67,7 @@ const SectionWithForm = () => {
     const notify = () =>
       toast.success("Thanks for subscribing!", {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,

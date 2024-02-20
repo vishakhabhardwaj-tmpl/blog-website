@@ -1,10 +1,10 @@
-
-body{
-    margin: 0;
-    background-color: black;
-    
+body,
+html {
+  margin: 0;
+  background-color: black;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
-h1{
-    align-items: start;
+h1 {
+  align-items: start;
 }
-
