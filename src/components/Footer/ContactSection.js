@@ -60,7 +60,7 @@ const ContactSection = () => {
 
     if (isValidFirstName && isValidLastName && isValidEmail) {
       try {
-        const url = "https://onmyscreen-backend.onrender.com/blogs/feedback/";
+        const url = "https://onmyscreen-qwoh.onrender.com/blogs/feedback/";
         const response = await fetch(url, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
